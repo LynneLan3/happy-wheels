@@ -1,0 +1,97 @@
+{
+  "state": "PARTIAL",
+  "official_assets": [
+    {
+      "id": "M01_HERO_CAPSULE",
+      "type": "official_steam_marketing_art",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4705510/bc714e8a1f8ec83a0c8d6384d7fc5ef7494385d9/hero_capsule.jpg",
+      "use": [
+        "homepage hero",
+        "brand visual"
+      ],
+      "evidence_role": "DECORATIVE"
+    },
+    {
+      "id": "M02_MAIN_CAPSULE",
+      "type": "official_steam_marketing_art",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4705510/a8561b95b3e93fe950e0208b2656b2e339bf844e/capsule_616x353.jpg",
+      "use": [
+        "guide card fallback",
+        "OG fallback"
+      ],
+      "evidence_role": "DECORATIVE"
+    },
+    {
+      "id": "M03_LIBRARY_HERO",
+      "type": "official_steam_marketing_art",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4705510/af6e926f3cb8e61d39c75df5fb7154e08df0bad3/library_hero.jpg",
+      "use": [
+        "wide section art",
+        "account/levels visual"
+      ],
+      "evidence_role": "DECORATIVE"
+    },
+    {
+      "id": "M04_HEADER",
+      "type": "official_steam_marketing_art",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4705510/acd7fedb1e3dfe0ce628c0c8a79dc7a8824ffef8/header.jpg",
+      "use": [
+        "small cards"
+      ],
+      "evidence_role": "DECORATIVE"
+    },
+    {
+      "id": "M05_LOGO",
+      "type": "official_steam_logo",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4705510/2227852d391b2e8464e20f82f3adb70924699c96/logo.png",
+      "use": [
+        "brand/logo reference"
+      ],
+      "evidence_role": "BRAND"
+    },
+    {
+      "id": "M06_TRAILER",
+      "type": "official_steam_gameplay_trailer",
+      "url": "https://video.fastly.steamstatic.com/store_trailers/4705510/1549693948/aa6e5ff5075999f85e4fe1e0b21eb73fc504abad/1786811190/microtrailer.mp4",
+      "use": [
+        "visual research",
+        "hero/video reference"
+      ],
+      "evidence_role": "FUNCTIONAL_ONLY_AFTER_FRAME_REVIEW"
+    }
+  ],
+  "launch_day_backlog": [
+    {
+      "id": "C01_POST_LAUNCH_WORKSHOP_STATE",
+      "target": "Steam Community/Store + release build: Workshop present or absent; distinguish from Level Browser",
+      "priority": "P0"
+    },
+    {
+      "id": "C02_POST_LAUNCH_ACCOUNT_LOGIN",
+      "target": "TotalJerkface login/linking/favorites/history/owned-level migration behavior",
+      "priority": "P0"
+    },
+    {
+      "id": "C03_POST_LAUNCH_CONTROLLER_LAYOUT",
+      "target": "Keyboard/controller mappings and character-specific inputs",
+      "priority": "P0"
+    },
+    {
+      "id": "C04_POST_LAUNCH_STEAM_DECK",
+      "target": "Live Deck compatibility status + actual input/performance",
+      "priority": "P0"
+    },
+    {
+      "id": "C05_POST_LAUNCH_PRICE",
+      "target": "Price/regional price snapshot",
+      "priority": "P0"
+    },
+    {
+      "id": "C06_POST_LAUNCH_ACHIEVEMENTS",
+      "target": "Achievement support/list",
+      "priority": "P0"
+    }
+  ],
+  "binary_assets_bundled": false,
+  "note": "Use official URLs/downloader in implementation environment. Follow existing project asset/licensing/local-copy policy."
+}

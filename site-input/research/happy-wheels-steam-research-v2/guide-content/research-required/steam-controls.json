@@ -1,0 +1,7 @@
+{
+  "slug": "steam-controls",
+  "route": "/steam-controls/",
+  "publish_state": "RESEARCH_REQUIRED",
+  "reason": "Cannot reuse legacy browser controls as Steam facts.",
+  "trigger": "Release build or official controller layout available."
+}

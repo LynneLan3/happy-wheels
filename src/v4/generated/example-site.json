@@ -67,8 +67,8 @@
         ]
       },
       {
-        "id": "recently-updated",
-        "label": "Recently Updated",
+        "id": "popular-questions",
+        "label": "Popular Questions",
         "pageIds": [
           "steam-account-levels"
         ]
@@ -78,24 +78,24 @@
   "pages": [
     {
       "id": "steam-release",
-      "title": "Happy Wheels Steam Release Date and What’s Confirmed",
+      "title": "Happy Wheels Steam release date & confirmed features",
       "href": "/steam-release/",
       "pageData": {
         "pageDataVersion": "v4",
         "page": {
           "id": "steam-release",
-          "title": "Happy Wheels Steam Release Date and What’s Confirmed",
+          "title": "Happy Wheels Steam release date & confirmed features",
           "href": "/steam-release/",
-          "query": "Happy Wheels Steam Release Date and What’s Confirmed",
-          "playerProblem": "Happy Wheels Steam Release Date and What’s Confirmed"
+          "query": "When is Happy Wheels coming to Steam?",
+          "playerProblem": "When is Happy Wheels coming to Steam?"
         },
         "state": {
           "platform": "Steam",
           "dataWindow": "September 13, 2026"
         },
         "intent": {
-          "query": "Happy Wheels Steam Release Date and What’s Confirmed",
-          "playerProblem": "Happy Wheels Steam Release Date and What’s Confirmed",
+          "query": "When is Happy Wheels coming to Steam?",
+          "playerProblem": "When is Happy Wheels coming to Steam?",
           "primaryTask": "entity-lookup",
           "prototype": "P1",
           "priority": 100,
@@ -130,66 +130,79 @@
           "intro": "Happy Wheels is scheduled to release on Steam on September 21, 2026. The Steam edition confirms 5 million+ user-created levels, a full Level Editor and Level Browser, no ads, and newly added controller support.",
           "sections": [
             {
-              "id": "confirmed",
-              "title": "What is confirmed",
+              "id": "included",
+              "title": "What the Steam version includes",
               "paragraphs": [],
               "bullets": [
-                "Release date is Sep 21, 2026.",
-                "Developer is Jim Bonacci; publisher is Fancy Force.",
-                "5M+ user-created levels are advertised.",
-                "Level Editor and interactive Level Browser are advertised.",
-                "No ads is advertised.",
-                "Controller support is newly added."
+                "A fully featured Level Editor and interactive Level Browser.",
+                "More than 5 million user-created levels, with new daily submissions.",
+                "Sorting and ranking in the Level Browser.",
+                "Newly added controller support and an ad-free experience."
               ]
             },
             {
-              "id": "at-launch",
-              "title": "What to check at launch",
-              "paragraphs": [],
-              "bullets": [
-                "Launch price is not officially confirmed in the Steam page snapshot.",
-                "Achievements are not confirmed.",
-                "Steam Workshop is not confirmed."
-              ]
+              "id": "launch",
+              "title": "The date is set. Some details are still open.",
+              "paragraphs": [
+                "The advertised release date is September 21, 2026. This is a pre-launch guide, based on information available on September 13.",
+                "The launch price, achievements and Steam Workshop support have not been officially confirmed. The Level Editor and Level Browser are confirmed features; that does not establish Workshop integration."
+              ],
+              "bullets": []
             }
           ],
-          "faq": []
+          "faq": [
+            {
+              "id": "faq-0",
+              "question": "Is Happy Wheels on Steam yet?",
+              "answer": "The announced Steam release date is September 21, 2026. As of September 13, the game is still in its pre-launch period."
+            },
+            {
+              "id": "faq-1",
+              "question": "Will the Steam version have ads?",
+              "answer": "The official Steam description advertises no ads."
+            },
+            {
+              "id": "faq-2",
+              "question": "Is Happy Wheels going to be free on Steam?",
+              "answer": "The launch price has not been officially confirmed. A free or paid release should not be assumed."
+            }
+          ]
         },
         "facts": [
           {
             "id": "fact-0",
-            "label": "Steam edition",
-            "value": "Release date is Sep 21, 2026.",
+            "label": "Release date",
+            "value": "September 21, 2026",
             "verified": true
           },
           {
             "id": "fact-1",
-            "label": "Steam edition",
-            "value": "Developer is Jim Bonacci; publisher is Fancy Force.",
+            "label": "Developer",
+            "value": "Jim Bonacci",
             "verified": true
           },
           {
             "id": "fact-2",
-            "label": "Steam edition",
-            "value": "5M+ user-created levels are advertised.",
+            "label": "Publisher",
+            "value": "Fancy Force",
             "verified": true
           },
           {
             "id": "fact-3",
-            "label": "Steam edition",
-            "value": "Level Editor and interactive Level Browser are advertised.",
+            "label": "Platforms",
+            "value": "Windows · SteamOS/Linux",
             "verified": true
           },
           {
             "id": "fact-4",
-            "label": "Steam edition",
-            "value": "No ads is advertised.",
+            "label": "Community levels",
+            "value": "5 million+ advertised",
             "verified": true
           },
           {
             "id": "fact-5",
-            "label": "Steam edition",
-            "value": "Controller support is newly added.",
+            "label": "Ads",
+            "value": "No ads",
             "verified": true
           }
         ],
@@ -209,19 +222,43 @@
             "freshness": "2026-09-13"
           }
         ],
-        "media": [],
+        "media": [
+          {
+            "mediaId": "release",
+            "role": "decorative",
+            "source": "/assets/happy-wheels/release.webp",
+            "localRef": "/assets/happy-wheels/release.webp",
+            "alt": "A cyclist and a van in a neighborhood, from the official Happy Wheels trailer",
+            "provenance": "Official Steam microtrailer supplied in Research Pack M06. Decorative; not evidence of account, Workshop or input support.",
+            "width": 854,
+            "height": 480,
+            "type": "image"
+          }
+        ],
         "freshness": {
           "platform": "Steam",
           "dataWindow": "September 13, 2026"
         },
-        "assets": [],
+        "assets": [
+          {
+            "mediaId": "release",
+            "role": "decorative",
+            "path": "/assets/happy-wheels/release.webp",
+            "alt": "A cyclist and a van in a neighborhood, from the official Happy Wheels trailer",
+            "usable": true,
+            "width": 854,
+            "height": 480,
+            "type": "image",
+            "provenance": "Official Steam microtrailer supplied in Research Pack M06. Decorative; not evidence of account, Workshop or input support."
+          }
+        ],
         "primitiveData": [
           {
             "instanceId": "heading",
             "primitiveId": "A01",
             "payload": {
-              "title": "Happy Wheels Steam Release Date and What’s Confirmed",
-              "task": "Happy Wheels Steam Release Date and What’s Confirmed",
+              "title": "Happy Wheels Steam release date & confirmed features",
+              "task": "When is Happy Wheels coming to Steam?",
               "subject": "Steam 2026"
             },
             "evidenceRefs": [],
@@ -242,28 +279,28 @@
             "payload": {
               "facts": [
                 {
-                  "label": "Steam edition",
-                  "value": "Release date is Sep 21, 2026."
+                  "label": "Release date",
+                  "value": "September 21, 2026"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Developer is Jim Bonacci; publisher is Fancy Force."
+                  "label": "Developer",
+                  "value": "Jim Bonacci"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "5M+ user-created levels are advertised."
+                  "label": "Publisher",
+                  "value": "Fancy Force"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Level Editor and interactive Level Browser are advertised."
+                  "label": "Platforms",
+                  "value": "Windows  -  SteamOS/Linux"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "No ads is advertised."
+                  "label": "Community levels",
+                  "value": "5 million+ advertised"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Controller support is newly added."
+                  "label": "Ads",
+                  "value": "No ads"
                 }
               ]
             },
@@ -305,8 +342,8 @@
             "interactive": false,
             "instanceId": "heading",
             "payload": {
-              "title": "Happy Wheels Steam Release Date and What’s Confirmed",
-              "task": "Happy Wheels Steam Release Date and What’s Confirmed",
+              "title": "Happy Wheels Steam release date & confirmed features",
+              "task": "When is Happy Wheels coming to Steam?",
               "subject": "Steam 2026"
             },
             "evidenceRefs": [],
@@ -335,28 +372,28 @@
             "payload": {
               "facts": [
                 {
-                  "label": "Steam edition",
-                  "value": "Release date is Sep 21, 2026."
+                  "label": "Release date",
+                  "value": "September 21, 2026"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Developer is Jim Bonacci; publisher is Fancy Force."
+                  "label": "Developer",
+                  "value": "Jim Bonacci"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "5M+ user-created levels are advertised."
+                  "label": "Publisher",
+                  "value": "Fancy Force"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Level Editor and interactive Level Browser are advertised."
+                  "label": "Platforms",
+                  "value": "Windows  -  SteamOS/Linux"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "No ads is advertised."
+                  "label": "Community levels",
+                  "value": "5 million+ advertised"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Controller support is newly added."
+                  "label": "Ads",
+                  "value": "No ads"
                 }
               ]
             },
@@ -365,28 +402,28 @@
             "behavior": "entity-facts",
             "data": [
               {
-                "label": "Steam edition",
-                "value": "Release date is Sep 21, 2026."
+                "label": "Release date",
+                "value": "September 21, 2026"
               },
               {
-                "label": "Steam edition",
-                "value": "Developer is Jim Bonacci; publisher is Fancy Force."
+                "label": "Developer",
+                "value": "Jim Bonacci"
               },
               {
-                "label": "Steam edition",
-                "value": "5M+ user-created levels are advertised."
+                "label": "Publisher",
+                "value": "Fancy Force"
               },
               {
-                "label": "Steam edition",
-                "value": "Level Editor and interactive Level Browser are advertised."
+                "label": "Platforms",
+                "value": "Windows  -  SteamOS/Linux"
               },
               {
-                "label": "Steam edition",
-                "value": "No ads is advertised."
+                "label": "Community levels",
+                "value": "5 million+ advertised"
               },
               {
-                "label": "Steam edition",
-                "value": "Controller support is newly added."
+                "label": "Ads",
+                "value": "No ads"
               }
             ]
           }
@@ -395,24 +432,24 @@
     },
     {
       "id": "steam-workshop",
-      "title": "Does Happy Wheels on Steam Have Workshop Support?",
+      "title": "Does Happy Wheels on Steam have Workshop support?",
       "href": "/steam-workshop/",
       "pageData": {
         "pageDataVersion": "v4",
         "page": {
           "id": "steam-workshop",
-          "title": "Does Happy Wheels on Steam Have Workshop Support?",
+          "title": "Does Happy Wheels on Steam have Workshop support?",
           "href": "/steam-workshop/",
-          "query": "Does Happy Wheels on Steam Have Workshop Support?",
-          "playerProblem": "Does Happy Wheels on Steam Have Workshop Support?"
+          "query": "Will there be Steam Workshop support?",
+          "playerProblem": "Will there be Steam Workshop support?"
         },
         "state": {
           "platform": "Steam",
           "dataWindow": "September 13, 2026"
         },
         "intent": {
-          "query": "Does Happy Wheels on Steam Have Workshop Support?",
-          "playerProblem": "Does Happy Wheels on Steam Have Workshop Support?",
+          "query": "Will there be Steam Workshop support?",
+          "playerProblem": "Will there be Steam Workshop support?",
           "primaryTask": "entity-lookup",
           "prototype": "P1",
           "priority": 90,
@@ -447,45 +484,65 @@
           "intro": "Steam Workshop support is not officially confirmed as of September 13, 2026. What is confirmed is a built-in Level Editor and interactive Level Browser with more than 5 million user-created levels and new daily submissions.",
           "sections": [
             {
-              "id": "confirmed",
-              "title": "What is confirmed",
-              "paragraphs": [],
-              "bullets": [
-                "Official Steam page lists a Level Editor.",
-                "Official Steam page lists an interactive Level Browser.",
-                "Official Steam page says there are 5M+ user-created levels."
-              ]
+              "id": "editor-browser",
+              "title": "What is confirmed: an editor and a browser",
+              "paragraphs": [
+                "The Steam description advertises a fully featured Level Editor and an interactive Level Browser. It also advertises more than 5 million user-created levels, new daily submissions, and sorting and ranking."
+              ],
+              "bullets": []
             },
             {
-              "id": "at-launch",
-              "title": "What to check at launch",
-              "paragraphs": [],
-              "bullets": [
-                "Steam Workshop itself is not listed/confirmed on the official Steam page.",
-                "Do not infer Workshop from community speculation or third-party articles."
-              ]
+              "id": "workshop-boundary",
+              "title": "Why that does not confirm Workshop",
+              "paragraphs": [
+                "Steam Workshop is a separate support question. The official store information available on September 13 does not confirm it.",
+                "Community hopes and articles claiming Workshop support do not change that official status. Whether Workshop integration will be present needs a launch update."
+              ],
+              "bullets": []
             }
           ],
-          "faq": []
+          "faq": [
+            {
+              "id": "faq-0",
+              "question": "Does the Steam version have a Level Editor?",
+              "answer": "Yes. A fully featured Level Editor is advertised on the official Steam page."
+            },
+            {
+              "id": "faq-1",
+              "question": "Can players browse community levels?",
+              "answer": "An interactive Level Browser and more than 5 million user-created levels are advertised."
+            },
+            {
+              "id": "faq-2",
+              "question": "Does “not confirmed” mean Workshop will never happen?",
+              "answer": "No. It means there is no official confirmation in the information available on September 13, 2026."
+            }
+          ]
         },
         "facts": [
           {
             "id": "fact-0",
-            "label": "Steam edition",
-            "value": "Official Steam page lists a Level Editor.",
+            "label": "Level Editor",
+            "value": "Confirmed",
             "verified": true
           },
           {
             "id": "fact-1",
-            "label": "Steam edition",
-            "value": "Official Steam page lists an interactive Level Browser.",
+            "label": "Level Browser",
+            "value": "Confirmed",
             "verified": true
           },
           {
             "id": "fact-2",
-            "label": "Steam edition",
-            "value": "Official Steam page says there are 5M+ user-created levels.",
+            "label": "Community levels",
+            "value": "5 million+ advertised",
             "verified": true
+          },
+          {
+            "id": "fact-3",
+            "label": "Steam Workshop",
+            "value": "Not confirmed",
+            "verified": false
           }
         ],
         "evidence": [
@@ -518,19 +575,43 @@
             "freshness": "2026-09-13"
           }
         ],
-        "media": [],
+        "media": [
+          {
+            "mediaId": "workshop",
+            "role": "decorative",
+            "source": "/assets/happy-wheels/workshop.webp",
+            "localRef": "/assets/happy-wheels/workshop.webp",
+            "alt": "A dinosaur in a neighborhood scene from the official Happy Wheels trailer",
+            "provenance": "Official Steam microtrailer supplied in Research Pack M06. Decorative; not evidence of account, Workshop or input support.",
+            "width": 854,
+            "height": 480,
+            "type": "image"
+          }
+        ],
         "freshness": {
           "platform": "Steam",
           "dataWindow": "September 13, 2026"
         },
-        "assets": [],
+        "assets": [
+          {
+            "mediaId": "workshop",
+            "role": "decorative",
+            "path": "/assets/happy-wheels/workshop.webp",
+            "alt": "A dinosaur in a neighborhood scene from the official Happy Wheels trailer",
+            "usable": true,
+            "width": 854,
+            "height": 480,
+            "type": "image",
+            "provenance": "Official Steam microtrailer supplied in Research Pack M06. Decorative; not evidence of account, Workshop or input support."
+          }
+        ],
         "primitiveData": [
           {
             "instanceId": "heading",
             "primitiveId": "A01",
             "payload": {
-              "title": "Does Happy Wheels on Steam Have Workshop Support?",
-              "task": "Does Happy Wheels on Steam Have Workshop Support?",
+              "title": "Does Happy Wheels on Steam have Workshop support?",
+              "task": "Will there be Steam Workshop support?",
               "subject": "Steam 2026"
             },
             "evidenceRefs": [],
@@ -551,16 +632,20 @@
             "payload": {
               "facts": [
                 {
-                  "label": "Steam edition",
-                  "value": "Official Steam page lists a Level Editor."
+                  "label": "Level Editor",
+                  "value": "Confirmed"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Official Steam page lists an interactive Level Browser."
+                  "label": "Level Browser",
+                  "value": "Confirmed"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Official Steam page says there are 5M+ user-created levels."
+                  "label": "Community levels",
+                  "value": "5 million+ advertised"
+                },
+                {
+                  "label": "Steam Workshop",
+                  "value": "Not confirmed"
                 }
               ]
             },
@@ -602,8 +687,8 @@
             "interactive": false,
             "instanceId": "heading",
             "payload": {
-              "title": "Does Happy Wheels on Steam Have Workshop Support?",
-              "task": "Does Happy Wheels on Steam Have Workshop Support?",
+              "title": "Does Happy Wheels on Steam have Workshop support?",
+              "task": "Will there be Steam Workshop support?",
               "subject": "Steam 2026"
             },
             "evidenceRefs": [],
@@ -632,16 +717,20 @@
             "payload": {
               "facts": [
                 {
-                  "label": "Steam edition",
-                  "value": "Official Steam page lists a Level Editor."
+                  "label": "Level Editor",
+                  "value": "Confirmed"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Official Steam page lists an interactive Level Browser."
+                  "label": "Level Browser",
+                  "value": "Confirmed"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Official Steam page says there are 5M+ user-created levels."
+                  "label": "Community levels",
+                  "value": "5 million+ advertised"
+                },
+                {
+                  "label": "Steam Workshop",
+                  "value": "Not confirmed"
                 }
               ]
             },
@@ -650,16 +739,20 @@
             "behavior": "entity-facts",
             "data": [
               {
-                "label": "Steam edition",
-                "value": "Official Steam page lists a Level Editor."
+                "label": "Level Editor",
+                "value": "Confirmed"
               },
               {
-                "label": "Steam edition",
-                "value": "Official Steam page lists an interactive Level Browser."
+                "label": "Level Browser",
+                "value": "Confirmed"
               },
               {
-                "label": "Steam edition",
-                "value": "Official Steam page says there are 5M+ user-created levels."
+                "label": "Community levels",
+                "value": "5 million+ advertised"
+              },
+              {
+                "label": "Steam Workshop",
+                "value": "Not confirmed"
               }
             ]
           }
@@ -668,24 +761,24 @@
     },
     {
       "id": "steam-account-levels",
-      "title": "Will Old Happy Wheels Accounts and Levels Carry Over to Steam?",
+      "title": "Will old Happy Wheels accounts and levels carry over to Steam?",
       "href": "/steam-account-levels/",
       "pageData": {
         "pageDataVersion": "v4",
         "page": {
           "id": "steam-account-levels",
-          "title": "Will Old Happy Wheels Accounts and Levels Carry Over to Steam?",
+          "title": "Will old Happy Wheels accounts and levels carry over to Steam?",
           "href": "/steam-account-levels/",
-          "query": "Will Old Happy Wheels Accounts and Levels Carry Over to Steam?",
-          "playerProblem": "Will Old Happy Wheels Accounts and Levels Carry Over to Steam?"
+          "query": "Will my old account and levels carry over?",
+          "playerProblem": "Will my old account and levels carry over?"
         },
         "state": {
           "platform": "Steam",
           "dataWindow": "September 13, 2026"
         },
         "intent": {
-          "query": "Will Old Happy Wheels Accounts and Levels Carry Over to Steam?",
-          "playerProblem": "Will Old Happy Wheels Accounts and Levels Carry Over to Steam?",
+          "query": "Will my old account and levels carry over?",
+          "playerProblem": "Will my old account and levels carry over?",
           "primaryTask": "entity-lookup",
           "prototype": "P1",
           "priority": 80,
@@ -720,39 +813,65 @@
           "intro": "The Steam version is confirmed to launch with more than 5 million user-created levels, so the community archive is clearly part of the release. However, there is no official confirmation yet that your personal TotalJerkface login, favorites, history or level ownership will link to Steam.",
           "sections": [
             {
-              "id": "confirmed",
-              "title": "What is confirmed",
-              "paragraphs": [],
-              "bullets": [
-                "Steam advertises 5M+ user-created levels.",
-                "Steam advertises an interactive Level Browser and Level Editor."
-              ]
+              "id": "community",
+              "title": "The community collection is part of the release",
+              "paragraphs": [
+                "The official Steam page advertises more than 5 million user-created levels, alongside the Level Browser and Level Editor. That is the confirmed community-content feature."
+              ],
+              "bullets": []
             },
             {
-              "id": "at-launch",
-              "title": "What to check at launch",
-              "paragraphs": [],
-              "bullets": [
-                "Personal TotalJerkface account linking is not officially confirmed.",
-                "Favorites/history/owned uploads migration is not officially confirmed.",
-                "Community replies claiming account linking must not be treated as official."
-              ]
+              "id": "personal-data",
+              "title": "Your personal account is a separate question",
+              "paragraphs": [
+                "The advertised level collection does not establish that a personal TotalJerkface login will link to Steam. It also does not confirm favorites, play history or ownership of old uploads.",
+                "Community replies about account sync are not an official migration announcement. Exact linking and transfer behavior remains a question for the release build."
+              ],
+              "bullets": []
             }
           ],
-          "faq": []
+          "faq": [
+            {
+              "id": "faq-0",
+              "question": "Will every level I remember be on Steam?",
+              "answer": "The store advertises more than 5 million user-created levels. It does not establish that every specific old level is included."
+            },
+            {
+              "id": "faq-1",
+              "question": "Can I sign in with my old TotalJerkface account?",
+              "answer": "Personal TotalJerkface account linking has not been officially confirmed."
+            },
+            {
+              "id": "faq-2",
+              "question": "Will my favorites and history transfer?",
+              "answer": "Favorites and play-history migration have not been officially confirmed."
+            }
+          ]
         },
         "facts": [
           {
             "id": "fact-0",
-            "label": "Steam edition",
-            "value": "Steam advertises 5M+ user-created levels.",
+            "label": "Community collection",
+            "value": "5 million+ levels advertised",
             "verified": true
           },
           {
             "id": "fact-1",
-            "label": "Steam edition",
-            "value": "Steam advertises an interactive Level Browser and Level Editor.",
+            "label": "Level Browser",
+            "value": "Confirmed",
             "verified": true
+          },
+          {
+            "id": "fact-2",
+            "label": "Personal account linking",
+            "value": "Not confirmed",
+            "verified": false
+          },
+          {
+            "id": "fact-3",
+            "label": "Favorites & history",
+            "value": "Transfer not confirmed",
+            "verified": false
           }
         ],
         "evidence": [
@@ -778,19 +897,43 @@
             "freshness": "2026-09-13"
           }
         ],
-        "media": [],
+        "media": [
+          {
+            "mediaId": "community",
+            "role": "decorative",
+            "source": "/assets/happy-wheels/community.webp",
+            "localRef": "/assets/happy-wheels/community.webp",
+            "alt": "A street scene with a character from the official Happy Wheels trailer",
+            "provenance": "Official Steam microtrailer supplied in Research Pack M06. Decorative; not evidence of account, Workshop or input support.",
+            "width": 854,
+            "height": 480,
+            "type": "image"
+          }
+        ],
         "freshness": {
           "platform": "Steam",
           "dataWindow": "September 13, 2026"
         },
-        "assets": [],
+        "assets": [
+          {
+            "mediaId": "community",
+            "role": "decorative",
+            "path": "/assets/happy-wheels/community.webp",
+            "alt": "A street scene with a character from the official Happy Wheels trailer",
+            "usable": true,
+            "width": 854,
+            "height": 480,
+            "type": "image",
+            "provenance": "Official Steam microtrailer supplied in Research Pack M06. Decorative; not evidence of account, Workshop or input support."
+          }
+        ],
         "primitiveData": [
           {
             "instanceId": "heading",
             "primitiveId": "A01",
             "payload": {
-              "title": "Will Old Happy Wheels Accounts and Levels Carry Over to Steam?",
-              "task": "Will Old Happy Wheels Accounts and Levels Carry Over to Steam?",
+              "title": "Will old Happy Wheels accounts and levels carry over to Steam?",
+              "task": "Will my old account and levels carry over?",
               "subject": "Steam 2026"
             },
             "evidenceRefs": [],
@@ -811,12 +954,20 @@
             "payload": {
               "facts": [
                 {
-                  "label": "Steam edition",
-                  "value": "Steam advertises 5M+ user-created levels."
+                  "label": "Community collection",
+                  "value": "5 million+ levels advertised"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Steam advertises an interactive Level Browser and Level Editor."
+                  "label": "Level Browser",
+                  "value": "Confirmed"
+                },
+                {
+                  "label": "Personal account linking",
+                  "value": "Not confirmed"
+                },
+                {
+                  "label": "Favorites & history",
+                  "value": "Transfer not confirmed"
                 }
               ]
             },
@@ -858,8 +1009,8 @@
             "interactive": false,
             "instanceId": "heading",
             "payload": {
-              "title": "Will Old Happy Wheels Accounts and Levels Carry Over to Steam?",
-              "task": "Will Old Happy Wheels Accounts and Levels Carry Over to Steam?",
+              "title": "Will old Happy Wheels accounts and levels carry over to Steam?",
+              "task": "Will my old account and levels carry over?",
               "subject": "Steam 2026"
             },
             "evidenceRefs": [],
@@ -888,12 +1039,20 @@
             "payload": {
               "facts": [
                 {
-                  "label": "Steam edition",
-                  "value": "Steam advertises 5M+ user-created levels."
+                  "label": "Community collection",
+                  "value": "5 million+ levels advertised"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Steam advertises an interactive Level Browser and Level Editor."
+                  "label": "Level Browser",
+                  "value": "Confirmed"
+                },
+                {
+                  "label": "Personal account linking",
+                  "value": "Not confirmed"
+                },
+                {
+                  "label": "Favorites & history",
+                  "value": "Transfer not confirmed"
                 }
               ]
             },
@@ -902,12 +1061,20 @@
             "behavior": "entity-facts",
             "data": [
               {
-                "label": "Steam edition",
-                "value": "Steam advertises 5M+ user-created levels."
+                "label": "Community collection",
+                "value": "5 million+ levels advertised"
               },
               {
-                "label": "Steam edition",
-                "value": "Steam advertises an interactive Level Browser and Level Editor."
+                "label": "Level Browser",
+                "value": "Confirmed"
+              },
+              {
+                "label": "Personal account linking",
+                "value": "Not confirmed"
+              },
+              {
+                "label": "Favorites & history",
+                "value": "Transfer not confirmed"
               }
             ]
           }
@@ -916,24 +1083,24 @@
     },
     {
       "id": "steam-controller-support",
-      "title": "Happy Wheels Steam Controller Support: What’s Confirmed",
+      "title": "Happy Wheels Steam controller support: what is confirmed",
       "href": "/steam-controller-support/",
       "pageData": {
         "pageDataVersion": "v4",
         "page": {
           "id": "steam-controller-support",
-          "title": "Happy Wheels Steam Controller Support: What’s Confirmed",
+          "title": "Happy Wheels Steam controller support: what is confirmed",
           "href": "/steam-controller-support/",
-          "query": "Happy Wheels Steam Controller Support: What’s Confirmed",
-          "playerProblem": "Happy Wheels Steam Controller Support: What’s Confirmed"
+          "query": "Can I play with a controller?",
+          "playerProblem": "Can I play with a controller?"
         },
         "state": {
           "platform": "Steam",
           "dataWindow": "September 13, 2026"
         },
         "intent": {
-          "query": "Happy Wheels Steam Controller Support: What’s Confirmed",
-          "playerProblem": "Happy Wheels Steam Controller Support: What’s Confirmed",
+          "query": "Can I play with a controller?",
+          "playerProblem": "Can I play with a controller?",
           "primaryTask": "entity-lookup",
           "prototype": "P1",
           "priority": 70,
@@ -969,30 +1136,64 @@
           "sections": [
             {
               "id": "confirmed",
-              "title": "What is confirmed",
-              "paragraphs": [],
-              "bullets": [
-                "New controller support is explicitly listed on the official Steam page."
-              ]
+              "title": "Yes, controller support is advertised",
+              "paragraphs": [
+                "New controller support is explicitly listed on the official Steam page. Steam-derived metadata also lists partial controller support."
+              ],
+              "bullets": []
             },
             {
-              "id": "at-launch",
-              "title": "What to check at launch",
-              "paragraphs": [],
-              "bullets": [
-                "Exact Steam button mapping is not verified pre-launch.",
-                "Character-specific controller behavior is not verified pre-launch."
-              ]
+              "id": "layout",
+              "title": "The exact controls are still open",
+              "paragraphs": [
+                "An exact Steam button layout has not been checked before launch. Character-specific controller behavior is also unconfirmed.",
+                "Legacy browser controls should not be treated as a Steam controller map. A complete button table needs the release build or an official layout."
+              ],
+              "bullets": []
             }
           ],
-          "faq": []
+          "faq": [
+            {
+              "id": "faq-0",
+              "question": "Does Happy Wheels on Steam support controllers?",
+              "answer": "Yes. Newly added controller support is officially advertised."
+            },
+            {
+              "id": "faq-1",
+              "question": "Is full controller support confirmed?",
+              "answer": "The available Steam-derived metadata reports partial controller support. Full controller support should not be assumed."
+            },
+            {
+              "id": "faq-2",
+              "question": "What are the controller buttons?",
+              "answer": "An exact Steam controller layout is not yet confirmed. There is no verified button map to list before launch."
+            }
+          ]
         },
         "facts": [
           {
             "id": "fact-0",
-            "label": "Steam edition",
-            "value": "New controller support is explicitly listed on the official Steam page.",
+            "label": "Controller support",
+            "value": "Officially advertised",
             "verified": true
+          },
+          {
+            "id": "fact-1",
+            "label": "Support metadata",
+            "value": "Partial controller support",
+            "verified": true
+          },
+          {
+            "id": "fact-2",
+            "label": "Exact button layout",
+            "value": "Not yet checked",
+            "verified": false
+          },
+          {
+            "id": "fact-3",
+            "label": "Character-specific inputs",
+            "value": "Not yet checked",
+            "verified": false
           }
         ],
         "evidence": [
@@ -1015,8 +1216,8 @@
             "instanceId": "heading",
             "primitiveId": "A01",
             "payload": {
-              "title": "Happy Wheels Steam Controller Support: What’s Confirmed",
-              "task": "Happy Wheels Steam Controller Support: What’s Confirmed",
+              "title": "Happy Wheels Steam controller support: what is confirmed",
+              "task": "Can I play with a controller?",
               "subject": "Steam 2026"
             },
             "evidenceRefs": [],
@@ -1037,8 +1238,20 @@
             "payload": {
               "facts": [
                 {
-                  "label": "Steam edition",
-                  "value": "New controller support is explicitly listed on the official Steam page."
+                  "label": "Controller support",
+                  "value": "Officially advertised"
+                },
+                {
+                  "label": "Support metadata",
+                  "value": "Partial controller support"
+                },
+                {
+                  "label": "Exact button layout",
+                  "value": "Not yet checked"
+                },
+                {
+                  "label": "Character-specific inputs",
+                  "value": "Not yet checked"
                 }
               ]
             },
@@ -1080,8 +1293,8 @@
             "interactive": false,
             "instanceId": "heading",
             "payload": {
-              "title": "Happy Wheels Steam Controller Support: What’s Confirmed",
-              "task": "Happy Wheels Steam Controller Support: What’s Confirmed",
+              "title": "Happy Wheels Steam controller support: what is confirmed",
+              "task": "Can I play with a controller?",
               "subject": "Steam 2026"
             },
             "evidenceRefs": [],
@@ -1110,8 +1323,20 @@
             "payload": {
               "facts": [
                 {
-                  "label": "Steam edition",
-                  "value": "New controller support is explicitly listed on the official Steam page."
+                  "label": "Controller support",
+                  "value": "Officially advertised"
+                },
+                {
+                  "label": "Support metadata",
+                  "value": "Partial controller support"
+                },
+                {
+                  "label": "Exact button layout",
+                  "value": "Not yet checked"
+                },
+                {
+                  "label": "Character-specific inputs",
+                  "value": "Not yet checked"
                 }
               ]
             },
@@ -1120,8 +1345,20 @@
             "behavior": "entity-facts",
             "data": [
               {
-                "label": "Steam edition",
-                "value": "New controller support is explicitly listed on the official Steam page."
+                "label": "Controller support",
+                "value": "Officially advertised"
+              },
+              {
+                "label": "Support metadata",
+                "value": "Partial controller support"
+              },
+              {
+                "label": "Exact button layout",
+                "value": "Not yet checked"
+              },
+              {
+                "label": "Character-specific inputs",
+                "value": "Not yet checked"
               }
             ]
           }
@@ -1130,24 +1367,24 @@
     },
     {
       "id": "steam-deck",
-      "title": "Happy Wheels Steam Deck Support: Current Pre-Launch Status",
+      "title": "Happy Wheels Steam Deck support: current pre-launch status",
       "href": "/steam-deck/",
       "pageData": {
         "pageDataVersion": "v4",
         "page": {
           "id": "steam-deck",
-          "title": "Happy Wheels Steam Deck Support: Current Pre-Launch Status",
+          "title": "Happy Wheels Steam Deck support: current pre-launch status",
           "href": "/steam-deck/",
-          "query": "Happy Wheels Steam Deck Support: Current Pre-Launch Status",
-          "playerProblem": "Happy Wheels Steam Deck Support: Current Pre-Launch Status"
+          "query": "Will it work on Steam Deck?",
+          "playerProblem": "Will it work on Steam Deck?"
         },
         "state": {
           "platform": "Steam",
           "dataWindow": "September 13, 2026"
         },
         "intent": {
-          "query": "Happy Wheels Steam Deck Support: Current Pre-Launch Status",
-          "playerProblem": "Happy Wheels Steam Deck Support: Current Pre-Launch Status",
+          "query": "Will it work on Steam Deck?",
+          "playerProblem": "Will it work on Steam Deck?",
           "primaryTask": "entity-lookup",
           "prototype": "P1",
           "priority": 60,
@@ -1182,37 +1419,66 @@
           "intro": "Steam-derived compatibility metadata currently reports Happy Wheels as Playable on Steam Deck, but this is a pre-launch status and should be rechecked when the game releases.",
           "sections": [
             {
-              "id": "confirmed",
-              "title": "What is confirmed",
-              "paragraphs": [],
-              "bullets": [
-                "Steam-derived metadata surfaced a Playable compatibility category.",
-                "Partial controller support metadata is present."
-              ]
+              "id": "known",
+              "title": "What the current status tells us",
+              "paragraphs": [
+                "Steam-derived metadata surfaced a Playable compatibility category before launch. Partial controller support metadata is also present.",
+                "This is a dated compatibility listing. It does not provide a tested release-build performance result or a complete set of Deck controls."
+              ],
+              "bullets": []
             },
             {
-              "id": "at-launch",
-              "title": "What to check at launch",
+              "id": "launch-check",
+              "title": "What still needs a launch check",
               "paragraphs": [],
               "bullets": [
-                "Status can change before/at launch.",
-                "Real release-build controls/performance are not yet tested in this pack."
+                "Whether the Steam Deck compatibility category changes at release.",
+                "How controller inputs and any additional input prompts behave in the release build.",
+                "Actual performance on Steam Deck. No frame-rate or settings recommendation is available yet."
               ]
             }
           ],
-          "faq": []
+          "faq": [
+            {
+              "id": "faq-0",
+              "question": "Is Happy Wheels Steam Deck Verified?",
+              "answer": "The pre-launch metadata in the September 13 snapshot reports Playable, not Verified."
+            },
+            {
+              "id": "faq-1",
+              "question": "Does Playable guarantee smooth performance?",
+              "answer": "This guide has no release-build performance test. The pre-launch category does not establish a frame-rate result."
+            },
+            {
+              "id": "faq-2",
+              "question": "What Steam Deck settings should I use?",
+              "answer": "Release-build settings and performance have not been tested. There is no supported settings recommendation yet."
+            }
+          ]
         },
         "facts": [
           {
             "id": "fact-0",
-            "label": "Steam edition",
-            "value": "Steam-derived metadata surfaced a Playable compatibility category.",
+            "label": "Compatibility metadata",
+            "value": "Playable · pre-launch",
             "verified": true
           },
           {
             "id": "fact-1",
-            "label": "Steam edition",
-            "value": "Partial controller support metadata is present.",
+            "label": "Controller metadata",
+            "value": "Partial support",
+            "verified": true
+          },
+          {
+            "id": "fact-2",
+            "label": "Release-build performance",
+            "value": "Not tested",
+            "verified": false
+          },
+          {
+            "id": "fact-3",
+            "label": "Status checked",
+            "value": "September 13, 2026",
             "verified": true
           }
         ],
@@ -1236,8 +1502,8 @@
             "instanceId": "heading",
             "primitiveId": "A01",
             "payload": {
-              "title": "Happy Wheels Steam Deck Support: Current Pre-Launch Status",
-              "task": "Happy Wheels Steam Deck Support: Current Pre-Launch Status",
+              "title": "Happy Wheels Steam Deck support: current pre-launch status",
+              "task": "Will it work on Steam Deck?",
               "subject": "Steam 2026"
             },
             "evidenceRefs": [],
@@ -1258,12 +1524,20 @@
             "payload": {
               "facts": [
                 {
-                  "label": "Steam edition",
-                  "value": "Steam-derived metadata surfaced a Playable compatibility category."
+                  "label": "Compatibility metadata",
+                  "value": "Playable  -  pre-launch"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Partial controller support metadata is present."
+                  "label": "Controller metadata",
+                  "value": "Partial support"
+                },
+                {
+                  "label": "Release-build performance",
+                  "value": "Not tested"
+                },
+                {
+                  "label": "Status checked",
+                  "value": "September 13, 2026"
                 }
               ]
             },
@@ -1305,8 +1579,8 @@
             "interactive": false,
             "instanceId": "heading",
             "payload": {
-              "title": "Happy Wheels Steam Deck Support: Current Pre-Launch Status",
-              "task": "Happy Wheels Steam Deck Support: Current Pre-Launch Status",
+              "title": "Happy Wheels Steam Deck support: current pre-launch status",
+              "task": "Will it work on Steam Deck?",
               "subject": "Steam 2026"
             },
             "evidenceRefs": [],
@@ -1335,12 +1609,20 @@
             "payload": {
               "facts": [
                 {
-                  "label": "Steam edition",
-                  "value": "Steam-derived metadata surfaced a Playable compatibility category."
+                  "label": "Compatibility metadata",
+                  "value": "Playable  -  pre-launch"
                 },
                 {
-                  "label": "Steam edition",
-                  "value": "Partial controller support metadata is present."
+                  "label": "Controller metadata",
+                  "value": "Partial support"
+                },
+                {
+                  "label": "Release-build performance",
+                  "value": "Not tested"
+                },
+                {
+                  "label": "Status checked",
+                  "value": "September 13, 2026"
                 }
               ]
             },
@@ -1349,12 +1631,20 @@
             "behavior": "entity-facts",
             "data": [
               {
-                "label": "Steam edition",
-                "value": "Steam-derived metadata surfaced a Playable compatibility category."
+                "label": "Compatibility metadata",
+                "value": "Playable  -  pre-launch"
               },
               {
-                "label": "Steam edition",
-                "value": "Partial controller support metadata is present."
+                "label": "Controller metadata",
+                "value": "Partial support"
+              },
+              {
+                "label": "Release-build performance",
+                "value": "Not tested"
+              },
+              {
+                "label": "Status checked",
+                "value": "September 13, 2026"
               }
             ]
           }

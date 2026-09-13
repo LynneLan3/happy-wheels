@@ -1,0 +1,14 @@
+# Source Registry
+
+| ID | Tier | Source | Use |
+|---|---|---|---|
+| `S01_STEAM_STORE` | A_OFFICIAL | [Happy Wheels on Steam](https://store.steampowered.com/app/4705510/Happy_Wheels/) | Release date Sep 21, 2026; Developer Jim Bonacci / publisher Fancy Force; 5 million+ user-created levels; Fully featured Level Editor; Interactive Level Browser with daily submissions and sorting/ranking; No ads; New controller support; Windows + SteamOS/Linux requirements |
+| `S02_STEAMDB` | A_DERIVED_STEAM_METADATA | [Happy Wheels SteamDB](https://steamdb.info/app/4705510/) | Steam metadata snapshot; release time snapshot; partial controller support metadata; Steam Deck / compatibility metadata snapshot |
+| `S03_REDDIT_STEAM_ANNOUNCEMENT` | B_COMMUNITY_DEMAND | [Happy Wheels is coming to Steam on September 21!](https://www.reddit.com/r/Steam/comments/1waiy2q/happy_wheels_is_coming_to_steam_on_september_21/) | large launch-announcement attention; price/free question; interest in existing levels and old accounts; Level Editor excitement; Workshop speculation |
+| `S04_REDDIT_STEAM_WORKSHOP` | B_COMMUNITY_DEMAND | [Happy Wheels releasing on Steam discussion](https://www.reddit.com/r/Steam/comments/1wcksjg/happy_wheels_is_releasing_on_steam_on_21st/) | high-upvote interest in Workshop support for levels/characters; price/free discussion |
+| `S05_REDDIT_COMMUNITY_PRESERVATION` | B_COMMUNITY_DEMAND | [Happy Wheels Steam community content preservation discussion](https://www.reddit.com/r/TwoBestFriendsPlay/comments/1wamw0o/happy_wheels_is_coming_to_steam_on_september_21/) | players asking whether community-made content carries over; old-account nostalgia/use-case; Workshop hopes |
+| `S06_REDDIT_JACKSEPTICEYE` | B_COMMUNITY_DEMAND | [Happy Wheels on Steam soon](https://www.reddit.com/r/jacksepticeye/comments/1wb7g1p/happy_wheels_on_steam_soon/) | explicit Workshop hope; nostalgia-driven launch attention |
+| `S07_INDIEFORGAMES_RELEASE` | C_SERP_COMPETITOR | [Happy Wheels Steam Release Date — September 21, 2026](https://indieforgames.com/happy-wheels-steam-release-date/) | recent SERP competition for brand/release intent; summarizes official features |
+| `S08_INDIEFORGAMES_GAME` | C_SERP_COMPETITOR | [Happy Wheels on Steam — Release Date & Gameplay](https://indieforgames.com/games/happy-wheels/) | recent SERP competition for generic Happy Wheels Steam intent |
+| `S09_LOW_QUALITY_WORKSHOP_CLAIM` | D_SERP_NOISE | [NeuralFeed Happy Wheels Steam article](https://neuralfeed.su/news/happy-wheels-vykhodit-v-steam-5-mln-urovnei-i-khardkor) | evidence of low-quality/unsupported Workshop claim in SERP |
+| `S10_TOTALJERKFACE_ORIGINAL` | A_OFFICIAL_LEGACY | [TotalJerkface Happy Wheels](https://totaljerkface.com/happy_wheels.tjf) | legacy browser identity/background |

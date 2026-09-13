@@ -1,0 +1,26 @@
+{
+  "schema": "research-guide-content-v2",
+  "slug": "steam-controller-support",
+  "route": "/steam-controller-support/",
+  "content_stage": "PRE_LAUNCH",
+  "article_class": "FAST_VERIFIED",
+  "publish_state": "READY_FOR_WRITER",
+  "title_draft": "Happy Wheels Steam Controller Support: What’s Confirmed",
+  "intent": "MECHANIC_STATUS",
+  "quick_answer_draft": "Yes. The Steam version officially advertises newly added controller support. Exact button mappings and character-specific controller inputs should wait for the release build.",
+  "verified_facts": [
+    "New controller support is explicitly listed on the official Steam page."
+  ],
+  "unknown_or_needs_recheck": [
+    "Exact Steam button mapping is not verified pre-launch.",
+    "Character-specific controller behavior is not verified pre-launch."
+  ],
+  "source_ids": [
+    "S01_STEAM_STORE"
+  ],
+  "media_slots": [
+    "M06_TRAILER",
+    "C03_POST_LAUNCH_CONTROLLER_LAYOUT"
+  ],
+  "writer_rule": "Final English must use the existing Shared Article Writer/APIMart path after repository binding. Keep VERIFIED and UNKNOWN explicit."
+}

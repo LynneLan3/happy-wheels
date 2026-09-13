@@ -1,0 +1,33 @@
+[
+  {
+    "id": "M01_HERO_CAPSULE",
+    "state": "FAILED",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "M02_MAIN_CAPSULE",
+    "state": "FAILED",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "M03_LIBRARY_HERO",
+    "state": "FAILED",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "M04_HEADER",
+    "state": "FAILED",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "M05_LOGO",
+    "state": "FAILED",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "M06_TRAILER",
+    "file": "/tmp/happy-wheels-preview-input/official/microtrailer.mp4",
+    "bytes": 3192945,
+    "state": "DOWNLOADED"
+  }
+]

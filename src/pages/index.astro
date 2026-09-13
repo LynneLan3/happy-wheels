@@ -1,18 +1,27 @@
 ---
+import Shell from '../presentation/Shell.astro';
+import GuideCard from '../presentation/GuideCard.astro';
+import presentation from '../../site-input/presentation.json';
 import generated from '../v4/generated/example-site.json';
-import V4GlobalHeader from '../components/v4/V4GlobalHeader.astro';
-import V4ThemeStyle from '../components/v4/V4ThemeStyle.astro';
-import '../v4/visual-system.css';
-import '../v4/product-overrides.css';
-const surfaces = generated.homepage.surfaces;
-const bySurface = (surface: typeof surfaces[number]) => surface.pageIds.map((id) => generated.pages.find((item) => item.id === id)).filter(Boolean);
+const pages = Object.entries(presentation);
+const statuses = [
+ {label:'Release',value:'SEP 21',detail:'2026 · scheduled',href:'/steam-release/',tone:'lime'},
+ {label:'Level Editor',value:'CONFIRMED',detail:'Fully featured editor',href:'/steam-workshop/',tone:'lime'},
+ {label:'Level Browser',value:'5M+ LEVELS',detail:'Community-made · advertised',href:'/steam-account-levels/',tone:'lime'},
+ {label:'Steam Workshop',value:'UNCONFIRMED',detail:'Separate from the Level Browser',href:'/steam-workshop/',tone:'amber'},
+ {label:'Controller',value:'SUPPORTED',detail:'Exact layout still to be checked',href:'/steam-controller-support/',tone:'lime'},
+ {label:'Steam Deck',value:'PLAYABLE*',detail:'Pre-launch metadata · not a hands-on test',href:'/steam-deck/',tone:'blue'},
+];
+const faqs = generated.pages.map(page => ({question:presentation[page.id as keyof typeof presentation].question, answer:page.pageData.body.intro, href:page.href}));
 ---
-<style is:global>
-.v4-home-identity-media{max-width:100%;margin:1.25rem 0 0}.v4-home-identity-media img{display:block;width:100%;height:auto;border:1px solid var(--v4-line)}.v4-home-identity-media figcaption{color:var(--v4-muted);font-size:.78rem;margin-top:.35rem}
-</style>
-<V4ThemeStyle theme={generated.theme} />
-<html lang="en"><head><title>{generated.game.name} · Utility Wiki</title></head><body class="v4-shell"><main class="v4-home">
-<V4GlobalHeader game={generated.game} navigation={generated.navigation} currentPageId="home" />
-<header class="v4-site-identity"><div><p class="v4-kicker">Current guide</p><h1>{generated.game.name}</h1><p>Choose a focused answer from the current research set.</p></div></header>
-{surfaces.map((surface) => { const items = bySurface(surface); return items.length > 0 && <section class="v4-home-section"><div class="v4-section-heading"><div><span class="v4-kicker">Research surface</span><h2>{surface.label}</h2></div><span>{items.length} answers</span></div><div class="v4-discovery-list">{items.map((item) => item && <a class="v4-discovery-item" href={item.href}><span><strong>{item.title}</strong><small>{item.pageData.intent.playerProblem}</small></span><b>Open</b></a>)}</div></section>})}
-</main></body></html>
+<Shell title="Happy Wheels Steam Guide — Release, Workshop & Compatibility" description="Your guide to Happy Wheels on Steam: the September 21, 2026 release, Workshop status, old accounts and levels, controller support and Steam Deck.">
+<main id="main">
+<section class="hero"><div class="container hero-grid"><div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> THE STEAM EDITION / 2026</p><h1>HAPPY<br /><span>WHEELS</span></h1><p class="hero-lead">A new starting line.<br /><strong>Coming to Steam September 21, 2026.</strong></p><div class="hero-actions"><a class="button primary" href="/steam-release/">Steam release guide <span aria-hidden="true">↗</span></a><a class="button quiet" href="#guides">Browse Steam guides <span aria-hidden="true">↓</span></a></div><div class="hero-meta"><span>5M+ community levels</span><span>No ads</span><span>Controller support</span></div></div><div class="hero-visual"><img src="/assets/happy-wheels/hero.webp" alt="A lawnmower rider airborne above a platform in the official Happy Wheels Steam trailer" width="854" height="480" fetchpriority="high" /><div class="hero-art-caption"><span>ALL THE CHAOS.<br /><b>NEW WAYS TO PLAY.</b></span><span class="art-index">01 / STEAM TRAILER</span></div></div></div></section>
+<section class="section questions-section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Popular questions</p><h2>What players want to know.</h2></div><span class="subtle">Straight to the answer <span aria-hidden="true">↘</span></span></div><div class="question-grid">{pages.map(([id,page],i) => <a href={`/${id}/`} class:list={['question-card',`tone-${page.tone}`]}><span class="question-number">0{i+1}<span aria-hidden="true">↗</span></span><h3>{page.question}</h3><span class="question-status">{page.status}</span></a>)}</div></div></section>
+<section class="section status-section"><div class="container"><div class="section-heading"><div><p class="eyebrow">The state of play</p><h2>Steam 2026 status.</h2></div><p class="subtle">As of September 13, 2026<br />Pre-launch information</p></div><div class="status-grid">{statuses.map(item => <a href={item.href} class:list={['status-card',`tone-${item.tone}`]}><span class="eyebrow">{item.label}</span><strong>{item.value}</strong><span>{item.detail}</span><span class="status-arrow" aria-hidden="true">↗</span></a>)}</div></div></section>
+<section class="section" id="start-here"><div class="container"><div class="section-heading"><div><p class="eyebrow">Start here</p><h2>Before you hit the road.</h2></div><span class="subtle">Three things to know first</span></div><div class="guide-grid"><GuideCard id="steam-release" /><GuideCard id="steam-workshop" /><GuideCard id="steam-account-levels" /></div></div></section>
+<section class="section browse-section" id="guides"><div class="container"><div class="section-heading"><div><p class="eyebrow">Browse guides</p><h2>How will you play?</h2></div><a class="text-link" href="#start-here">Release & community guides ↑</a></div><div class="compat-grid"><GuideCard id="steam-controller-support" compact /><GuideCard id="steam-deck" compact /></div></div></section>
+<section class="section"><div class="container visual-section"><div class="visual-copy"><p class="eyebrow">A glimpse of the game</p><h2>Different vehicles.<br />Same chaos.</h2><p>Multiple characters with their own vehicles and abilities. Millions of community-made levels. Take a look at the official Steam trailer.</p><a class="text-link" href="/steam-release/">See what the Steam edition includes ↗</a></div><figure><video controls playsinline preload="none" poster="/assets/happy-wheels/release.webp" width="854" height="480" aria-label="Official Happy Wheels Steam microtrailer"><source src="/assets/happy-wheels/official-trailer.mp4" type="video/mp4" /></video><figcaption>Official Steam trailer · 9-second clip · no spoken dialogue</figcaption></figure></div></section>
+<section class="section launch-section"><div class="container launch-grid"><div><p class="eyebrow">What to check at launch</p><h2>The next checkpoint.</h2><p>September 21 is the scheduled release. These details are still open.</p></div><div class="launch-list"><a href="/steam-workshop/">Workshop support <span>Not confirmed ↗</span></a><a href="/steam-account-levels/">Personal account transfer <span>Not confirmed ↗</span></a><a href="/steam-controller-support/">Exact controller layout <span>Awaiting launch details ↗</span></a><a href="/steam-deck/">Steam Deck performance <span>Not tested ↗</span></a><a href="/steam-release/">Price & achievements <span>Not confirmed ↗</span></a></div></div></section>
+<section class="section faq-section" id="faq"><div class="container faq-grid"><div><p class="eyebrow">One more thing</p><h2>Common questions.</h2><p class="subtle">The short version, before launch.</p></div><div>{faqs.map(item => <details><summary>{item.question}</summary><p>{item.answer}</p><a class="text-link" href={item.href}>Read the full answer ↗</a></details>)}</div></div></section>
+</main></Shell>

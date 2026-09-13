@@ -1,0 +1,68 @@
+{
+  "launch": [
+    {
+      "route": "/steam-release/",
+      "title": "Happy Wheels Steam Release Date and What’s Confirmed",
+      "state": "READY_FOR_WRITER"
+    },
+    {
+      "route": "/steam-workshop/",
+      "title": "Does Happy Wheels on Steam Have Workshop Support?",
+      "state": "READY_FOR_WRITER"
+    },
+    {
+      "route": "/steam-account-levels/",
+      "title": "Will Old Happy Wheels Accounts and Levels Carry Over to Steam?",
+      "state": "READY_FOR_WRITER"
+    },
+    {
+      "route": "/steam-controller-support/",
+      "title": "Happy Wheels Steam Controller Support: What’s Confirmed",
+      "state": "READY_FOR_WRITER"
+    },
+    {
+      "route": "/steam-deck/",
+      "title": "Happy Wheels Steam Deck Support: Current Pre-Launch Status",
+      "state": "READY_FOR_WRITER"
+    }
+  ],
+  "verified_backlog_not_launch": [
+    {
+      "route": "/steam-system-requirements/",
+      "state": "VERIFIED_BACKLOG_NOT_LAUNCH_PRIORITY",
+      "reason": "Facts are available, but 3-query closeout did not show this as one of the strongest launch problem intents."
+    },
+    {
+      "route": "/steam-level-editor-level-browser/",
+      "state": "VERIFIED_BACKLOG_NOT_LAUNCH_PRIORITY",
+      "reason": "High-level feature facts are verified, but this content is covered inside the Workshop/release pages until GSC proves a separate intent."
+    }
+  ],
+  "research_required": [
+    {
+      "route": "/steam-price/",
+      "state": "RESEARCH_REQUIRED",
+      "reason": "Official price not confirmed."
+    },
+    {
+      "route": "/steam-achievements/",
+      "state": "RESEARCH_REQUIRED",
+      "reason": "Official achievement support/list not confirmed."
+    },
+    {
+      "route": "/steam-controls/",
+      "state": "RESEARCH_REQUIRED",
+      "reason": "Cannot reuse legacy browser controls as Steam facts."
+    },
+    {
+      "route": "/level-editor-controls/",
+      "state": "RESEARCH_REQUIRED",
+      "reason": "Steam-specific editor workflow/controls not verified."
+    },
+    {
+      "route": "/characters/",
+      "state": "RESEARCH_REQUIRED",
+      "reason": "Official store confirms multiple characters but not full Steam roster/count."
+    }
+  ]
+}

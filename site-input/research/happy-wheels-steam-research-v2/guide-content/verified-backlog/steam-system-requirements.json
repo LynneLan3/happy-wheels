@@ -1,0 +1,9 @@
+{
+  "slug": "steam-system-requirements",
+  "route": "/steam-system-requirements/",
+  "publish_state": "VERIFIED_BACKLOG_NOT_LAUNCH_PRIORITY",
+  "reason": "Facts are available, but 3-query closeout did not show this as one of the strongest launch problem intents.",
+  "sources": [
+    "S01_STEAM_STORE"
+  ]
+}

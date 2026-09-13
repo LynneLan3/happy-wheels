@@ -1,0 +1,7 @@
+{
+  "slug": "level-editor-controls",
+  "route": "/level-editor-controls/",
+  "publish_state": "RESEARCH_REQUIRED",
+  "reason": "Steam-specific editor workflow/controls not verified.",
+  "trigger": "Release build available."
+}

@@ -1,0 +1,32 @@
+{
+  "pack": "happy-wheels-steam-research-v2",
+  "supersedes": "happy-wheels-steam-research-v1",
+  "version": "2.0.0",
+  "research_date": "2026-09-13",
+  "game": "Happy Wheels",
+  "steam_app_id": 4705510,
+  "steam_release_date": "2026-09-21",
+  "site_lifecycle": "BUILD",
+  "content_stage": "PRE_LAUNCH",
+  "implementation_repository": null,
+  "repository_binding_status": "UNRESOLVED",
+  "implementation_prompt_status": "BLOCKED_UNTIL_EXACT_REPOSITORY_BINDING",
+  "research_owner": "ChatGPT/controller",
+  "implementation_owner": "Codex",
+  "workflow_alignment": {
+    "candidate_research_reused_as_build_input": true,
+    "three_query_serp_closeout_completed": true,
+    "launch_strategy": "Homepage + 5 strongest Steam-specific intent pages",
+    "custom_design_required": false,
+    "design_default": "reuse approved mature game-guide presentation baseline",
+    "repeat_full_game_research": false
+  },
+  "hard_boundaries": [
+    "Do not repeat broad Happy Wheels research before implementation.",
+    "Do not turn legacy browser controls/mechanics into Steam-version facts without re-verification.",
+    "Do not claim Steam Workshop exists. Official store confirms Level Editor + Level Browser, not Workshop.",
+    "Do not claim old TotalJerkface account/favorites/history transfer is confirmed.",
+    "Do not publish price or achievements as confirmed until official evidence appears.",
+    "Verified but low-priority topics stay backlog; being writable is not enough to justify a launch page."
+  ]
+}

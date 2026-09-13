@@ -1,0 +1,31 @@
+{
+  "schema": "research-guide-content-v2",
+  "slug": "steam-workshop",
+  "route": "/steam-workshop/",
+  "content_stage": "PRE_LAUNCH",
+  "article_class": "FAST_VERIFIED",
+  "publish_state": "READY_FOR_WRITER",
+  "title_draft": "Does Happy Wheels on Steam Have Workshop Support?",
+  "intent": "MECHANIC_STATUS",
+  "quick_answer_draft": "Steam Workshop support is not officially confirmed as of September 13, 2026. What is confirmed is a built-in Level Editor and interactive Level Browser with more than 5 million user-created levels and new daily submissions.",
+  "verified_facts": [
+    "Official Steam page lists a Level Editor.",
+    "Official Steam page lists an interactive Level Browser.",
+    "Official Steam page says there are 5M+ user-created levels."
+  ],
+  "unknown_or_needs_recheck": [
+    "Steam Workshop itself is not listed/confirmed on the official Steam page.",
+    "Do not infer Workshop from community speculation or third-party articles."
+  ],
+  "source_ids": [
+    "S01_STEAM_STORE",
+    "S04_REDDIT_STEAM_WORKSHOP",
+    "S06_REDDIT_JACKSEPTICEYE",
+    "S09_LOW_QUALITY_WORKSHOP_CLAIM"
+  ],
+  "media_slots": [
+    "M01_HERO_CAPSULE",
+    "C01_POST_LAUNCH_WORKSHOP_STATE"
+  ],
+  "writer_rule": "Final English must use the existing Shared Article Writer/APIMart path after repository binding. Keep VERIFIED and UNKNOWN explicit."
+}

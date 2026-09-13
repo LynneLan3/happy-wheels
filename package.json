@@ -1,5 +1,5 @@
 {
-  "name": "v4-standalone-generated-site",
+  "name": "happy-wheels-steam-guide",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,7 +8,9 @@
     "validate:generated": "tsx ./scripts/v4/standalone/validate-generated-site.ts",
     "validate": "npm run validate:generated",
     "validate:template": "npm run validate:generated",
-    "test:generator": "tsx --test tests/v4/standalone-generator.test.ts"
+    "dev": "astro dev --host 127.0.0.1",
+    "preview": "astro preview --host 127.0.0.1",
+    "site:generate": "tsx scripts/v4/generate-v4.ts site-input/g017-p2-v4-input.json src/v4/generated/example-site.json"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

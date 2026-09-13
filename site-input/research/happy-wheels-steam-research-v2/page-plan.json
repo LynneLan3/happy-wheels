@@ -1,0 +1,55 @@
+{
+  "launch_model": "Homepage + 5 strongest Steam-specific intent pages. No broad Wiki categories at launch.",
+  "homepage": {
+    "working_h1": "Happy Wheels Steam Guide",
+    "supporting_copy": "Release date, Workshop status, old level/account compatibility, controller support and Steam Deck — with verified answers separated from what is still unconfirmed.",
+    "primary_questions": [
+      "Does the Steam version have Workshop?",
+      "Will my old account or levels carry over?",
+      "When does it release?",
+      "Does it support controllers?",
+      "Will it work on Steam Deck?"
+    ]
+  },
+  "launch_pages": [
+    {
+      "route": "/steam-release/",
+      "priority": 1,
+      "reason": "Owns brand/release query and acts as the primary factual Steam-edition entry page."
+    },
+    {
+      "route": "/steam-workshop/",
+      "priority": 2,
+      "reason": "Strongest problem-query SERP gap; current SERP contains speculation and at least one unsupported Workshop claim."
+    },
+    {
+      "route": "/steam-account-levels/",
+      "priority": 3,
+      "reason": "Second strongest problem gap; players want to know whether old accounts/favorites/community content carry over."
+    },
+    {
+      "route": "/steam-controller-support/",
+      "priority": 4,
+      "reason": "Officially confirmed and immediately useful; keep high-level until release controls are captured."
+    },
+    {
+      "route": "/steam-deck/",
+      "priority": 5,
+      "reason": "Real pre-release question with useful current status, but requires a launch-day recheck."
+    }
+  ],
+  "verified_but_not_launch_priority": [
+    "/steam-system-requirements/",
+    "/steam-level-editor-level-browser/"
+  ],
+  "research_required_not_launch": [
+    "/steam-price/",
+    "/steam-achievements/",
+    "/steam-controls/",
+    "/level-editor-controls/",
+    "/characters/"
+  ],
+  "merged_topics": {
+    "steam-vs-browser": "Do not launch as a standalone page. Fold verified browser-vs-Steam differences into /steam-account-levels/ and /steam-release/ until GSC proves a separate intent."
+  }
+}

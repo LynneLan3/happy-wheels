@@ -1,0 +1,34 @@
+{
+  "schema": "research-guide-content-v2",
+  "slug": "steam-release",
+  "route": "/steam-release/",
+  "content_stage": "PRE_LAUNCH",
+  "article_class": "FAST_VERIFIED",
+  "publish_state": "READY_FOR_WRITER",
+  "title_draft": "Happy Wheels Steam Release Date and What’s Confirmed",
+  "intent": "NEWS_UPDATE",
+  "quick_answer_draft": "Happy Wheels is scheduled to release on Steam on September 21, 2026. The Steam edition confirms 5 million+ user-created levels, a full Level Editor and Level Browser, no ads, and newly added controller support.",
+  "verified_facts": [
+    "Release date is Sep 21, 2026.",
+    "Developer is Jim Bonacci; publisher is Fancy Force.",
+    "5M+ user-created levels are advertised.",
+    "Level Editor and interactive Level Browser are advertised.",
+    "No ads is advertised.",
+    "Controller support is newly added."
+  ],
+  "unknown_or_needs_recheck": [
+    "Launch price is not officially confirmed in the Steam page snapshot.",
+    "Achievements are not confirmed.",
+    "Steam Workshop is not confirmed."
+  ],
+  "source_ids": [
+    "S01_STEAM_STORE",
+    "S02_STEAMDB"
+  ],
+  "media_slots": [
+    "M01_HERO_CAPSULE",
+    "M02_MAIN_CAPSULE",
+    "M06_TRAILER"
+  ],
+  "writer_rule": "Final English must use the existing Shared Article Writer/APIMart path after repository binding. Keep VERIFIED and UNKNOWN explicit."
+}

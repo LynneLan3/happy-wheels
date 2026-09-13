@@ -1,0 +1,7 @@
+{
+  "slug": "characters",
+  "route": "/characters/",
+  "publish_state": "RESEARCH_REQUIRED",
+  "reason": "Official store confirms multiple characters but not full Steam roster/count.",
+  "trigger": "Steam build or official roster available."
+}

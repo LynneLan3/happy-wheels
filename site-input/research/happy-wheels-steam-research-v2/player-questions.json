@@ -1,0 +1,73 @@
+[
+  {
+    "question": "Does Happy Wheels on Steam use Steam Workshop?",
+    "signal": "VERY_HIGH",
+    "state": "READY_FOR_WRITER_AS_STATUS_PAGE",
+    "answer_boundary": "Steam Workshop is not officially confirmed. The official Steam page confirms a built-in Level Editor and interactive Level Browser.",
+    "sources": [
+      "S01_STEAM_STORE",
+      "S04_REDDIT_STEAM_WORKSHOP",
+      "S06_REDDIT_JACKSEPTICEYE"
+    ],
+    "route": "/steam-workshop/"
+  },
+  {
+    "question": "Will my old Happy Wheels account, favorites or levels carry over to Steam?",
+    "signal": "HIGH",
+    "state": "READY_FOR_WRITER_AS_STATUS_PAGE",
+    "answer_boundary": "The Steam page confirms 5M+ community levels, but does not officially confirm migration/linking of personal TotalJerkface account, favorites, history or ownership.",
+    "sources": [
+      "S01_STEAM_STORE",
+      "S03_REDDIT_STEAM_ANNOUNCEMENT",
+      "S05_REDDIT_COMMUNITY_PRESERVATION"
+    ],
+    "route": "/steam-account-levels/"
+  },
+  {
+    "question": "When does Happy Wheels release on Steam?",
+    "signal": "HIGH",
+    "state": "READY_FOR_WRITER",
+    "sources": [
+      "S01_STEAM_STORE",
+      "S02_STEAMDB"
+    ],
+    "route": "/steam-release/"
+  },
+  {
+    "question": "Does Happy Wheels on Steam support controllers?",
+    "signal": "MEDIUM_HIGH",
+    "state": "READY_FOR_WRITER",
+    "answer_boundary": "Controller support is confirmed; exact button maps are not yet verified.",
+    "sources": [
+      "S01_STEAM_STORE"
+    ],
+    "route": "/steam-controller-support/"
+  },
+  {
+    "question": "Does Happy Wheels work on Steam Deck?",
+    "signal": "MEDIUM_HIGH",
+    "state": "READY_FOR_WRITER_WITH_RECHECK",
+    "answer_boundary": "Use dated Steam-derived compatibility status and recheck near launch.",
+    "sources": [
+      "S02_STEAMDB"
+    ],
+    "route": "/steam-deck/"
+  },
+  {
+    "question": "How much will Happy Wheels cost on Steam?",
+    "signal": "HIGH",
+    "state": "RESEARCH_REQUIRED",
+    "sources": [
+      "S03_REDDIT_STEAM_ANNOUNCEMENT",
+      "S04_REDDIT_STEAM_WORKSHOP"
+    ],
+    "route": "/steam-price/"
+  },
+  {
+    "question": "Will Happy Wheels have Steam achievements?",
+    "signal": "MEDIUM_HIGH",
+    "state": "RESEARCH_REQUIRED",
+    "sources": [],
+    "route": "/steam-achievements/"
+  }
+]

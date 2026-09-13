@@ -1,0 +1,7 @@
+{
+  "slug": "steam-price",
+  "route": "/steam-price/",
+  "publish_state": "RESEARCH_REQUIRED",
+  "reason": "Official price not confirmed.",
+  "trigger": "Steam displays price or publisher/developer announces it."
+}

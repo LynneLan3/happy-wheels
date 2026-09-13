@@ -1,11 +1,11 @@
 ---
+import Shell from '../presentation/Shell.astro';
 import generated from '../v4/generated/example-site.json';
-import '../v4/visual-system.css';
-import '../v4/product-overrides.css';
-import V4GlobalHeader from '../components/v4/V4GlobalHeader.astro';
-import V4ThemeStyle from '../components/v4/V4ThemeStyle.astro';
-import { PLAYER_TASK_LABELS, type PlayerTask } from '../v4/intent-contract';
-const searchable = generated.pages.map((page) => ({ ...page, type: PLAYER_TASK_LABELS[page.pageData.intent.primaryTask as PlayerTask] }));
 ---
-<V4ThemeStyle theme={generated.theme} />
-<html lang="en"><head><title>Search - {generated.game.name}</title></head><body class="v4-shell"><main class="v4-home" data-v4-search-page><V4GlobalHeader game={generated.game} navigation={generated.navigation} currentPageId="search" /><header class="v4-answer-header"><p class="v4-kicker">Guide search</p><h1>Search {generated.game.name}</h1><p class="v4-muted">Find answers from the current guide.</p></header><form class="v4-search-form" role="search"><label for="v4-search-input">Search the guide<input id="v4-search-input" name="q" type="search" placeholder="Search tasks" /></label><button class="v4-action" type="submit">Search</button></form><p class="v4-search-status" aria-live="polite" data-v4-search-status>{searchable.length} indexed answers</p><section class="v4-search-results" aria-label="Search results">{searchable.map((item) => <a class="v4-search-result" href={item.href} data-search-text={`${item.title} ${item.type} ${item.pageData.intent.query} ${item.pageData.intent.playerProblem}`}><span class="v4-search-type">{item.type}</span><strong>{item.title}</strong><small>{item.pageData.intent.playerProblem}</small></a>)}</section></main></body><script is:inline>const f=document.querySelector('form'),i=document.querySelector('#v4-search-input'),s=document.querySelector('[data-v4-search-status]'),a=[...document.querySelectorAll('.v4-search-result')];const run=()=>{const q=i.value.trim().toLowerCase();let n=0;a.forEach(x=>{const v=!q||x.dataset.searchText.toLowerCase().includes(q);x.hidden=!v;if(v)n++});s.textContent=n+' result'+(n===1?'':'s')};f.addEventListener('submit',e=>{e.preventDefault();run()});i.addEventListener('input',run);run();</script></html>
+<Shell title="Search Happy Wheels Steam Guides" description="Find answers about Happy Wheels on Steam." path="/search/"><main id="main" class="container utility-page"><p class="eyebrow">Find an answer</p><h1>Search Steam guides.</h1><label class="search-label">What do you want to know?<input type="search" id="guide-search" placeholder="Try Workshop, favorites or Steam Deck" /></label><p id="search-count" role="status">5 guides</p><div class="search-results">{generated.pages.map(page => <a href={page.href} data-search-text={JSON.stringify([page.title,page.pageData.body,page.pageData.facts]).toLowerCase()}><h2>{page.title}</h2><p>{page.pageData.body.intro}</p><span aria-hidden="true">↗</span></a>)}</div><p id="no-results" hidden>No matching guide yet. <a href="/category/">Browse all Steam guides.</a></p></main></Shell>
+<script>
+const input = document.querySelector<HTMLInputElement>('#guide-search')!;
+const cards = [...document.querySelectorAll<HTMLAnchorElement>('[data-search-text]')];
+const filter = () => { const query = input.value.trim().toLowerCase(); let count = 0; for (const card of cards) { card.hidden = !card.dataset.searchText?.includes(query); if (!card.hidden) count++; } document.querySelector('#search-count')!.textContent = `${count} guide${count === 1 ? '' : 's'}`; document.querySelector<HTMLElement>('#no-results')!.hidden = count > 0; };
+input.value = new URLSearchParams(location.search).get('q') ?? ''; input.addEventListener('input',filter); filter();
+</script>

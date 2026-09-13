@@ -1,0 +1,27 @@
+{
+  "identity": {
+    "game": "Happy Wheels",
+    "steam_app_id": 4705510,
+    "developer": "Jim Bonacci",
+    "publisher": "Fancy Force",
+    "release_date": "2026-09-21"
+  },
+  "positioning": "Happy Wheels Steam Guide / 2026 Edition",
+  "not_positioning": "generic Happy Wheels Wiki",
+  "verified_steam_facts": [
+    "5 million+ user-created levels",
+    "fully featured Level Editor",
+    "interactive Level Browser",
+    "new daily user-submitted levels",
+    "sorting/ranking in Level Browser",
+    "no ads",
+    "newly added controller support",
+    "multiple characters with unique vehicles/abilities",
+    "Windows and SteamOS/Linux support"
+  ],
+  "demand_context": {
+    "social": "Large recent Reddit launch threads plus explicit questions/hopes around price, Workshop, old community content/accounts, controller and Steam Deck.",
+    "serp": "Generic launch coverage is appearing, but no dedicated guide domain dominates Steam-specific problem queries.",
+    "trends": "A third-party recent article reports a sharp US Google Trends breakout for 'happy wheels steam'; this was not independently captured in this pack and is contextual only."
+  }
+}

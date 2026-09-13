@@ -1,0 +1,26 @@
+{
+  "schema": "research-guide-content-v2",
+  "slug": "steam-deck",
+  "route": "/steam-deck/",
+  "content_stage": "PRE_LAUNCH",
+  "article_class": "FAST_VERIFIED",
+  "publish_state": "READY_FOR_WRITER",
+  "title_draft": "Happy Wheels Steam Deck Support: Current Pre-Launch Status",
+  "intent": "PLATFORM_STATUS",
+  "quick_answer_draft": "Steam-derived compatibility metadata currently reports Happy Wheels as Playable on Steam Deck, but this is a pre-launch status and should be rechecked when the game releases.",
+  "verified_facts": [
+    "Steam-derived metadata surfaced a Playable compatibility category.",
+    "Partial controller support metadata is present."
+  ],
+  "unknown_or_needs_recheck": [
+    "Status can change before/at launch.",
+    "Real release-build controls/performance are not yet tested in this pack."
+  ],
+  "source_ids": [
+    "S02_STEAMDB"
+  ],
+  "media_slots": [
+    "C04_POST_LAUNCH_STEAM_DECK"
+  ],
+  "writer_rule": "Final English must use the existing Shared Article Writer/APIMart path after repository binding. Keep VERIFIED and UNKNOWN explicit."
+}

@@ -1,0 +1,7 @@
+{
+  "slug": "steam-achievements",
+  "route": "/steam-achievements/",
+  "publish_state": "RESEARCH_REQUIRED",
+  "reason": "Official achievement support/list not confirmed.",
+  "trigger": "Steam feature/API or release build exposes achievements."
+}

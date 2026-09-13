@@ -1,0 +1,95 @@
+{
+  "method": "Exactly three search intents were used for the final pre-build closeout. Results below are the observed high-ranking result set from live web search, not a claim of an exhaustive Google Top 10 export.",
+  "queries": [
+    {
+      "query": "Happy Wheels Steam",
+      "role": "BRAND",
+      "observed_results": [
+        {
+          "type": "Steam metadata",
+          "source_id": "S02_STEAMDB",
+          "assessment": "authoritative metadata, not a guide"
+        },
+        {
+          "type": "Reddit announcement",
+          "source_id": "S03_REDDIT_STEAM_ANNOUNCEMENT",
+          "assessment": "very strong discussion/demand"
+        },
+        {
+          "type": "recent news/guide-like competitor",
+          "source_id": "S07_INDIEFORGAMES_RELEASE",
+          "assessment": "covers release date and high-level confirmed features"
+        },
+        {
+          "type": "recent game profile",
+          "source_id": "S08_INDIEFORGAMES_GAME",
+          "assessment": "generic Steam launch overview"
+        }
+      ],
+      "dedicated_specialist_guide_domain": false,
+      "competition": "MEDIUM",
+      "gap": "Brand/release SERP is filling with news, but still lacks a focused Steam-edition answer hub that routes to exact player questions.",
+      "launch_owner": "/steam-release/"
+    },
+    {
+      "query": "Happy Wheels Steam Workshop",
+      "role": "STRONGEST_PLAYER_PROBLEM",
+      "observed_results": [
+        {
+          "type": "Reddit / community discussion",
+          "source_id": "S04_REDDIT_STEAM_WORKSHOP",
+          "assessment": "players explicitly want Workshop support"
+        },
+        {
+          "type": "Reddit creator-fandom discussion",
+          "source_id": "S06_REDDIT_JACKSEPTICEYE",
+          "assessment": "explicit 'WORKSHOP I HOPE' demand"
+        },
+        {
+          "type": "low-quality article",
+          "source_id": "S09_LOW_QUALITY_WORKSHOP_CLAIM",
+          "assessment": "asserts Workshop without official confirmation; accuracy gap"
+        },
+        {
+          "type": "official Steam page",
+          "source_id": "S01_STEAM_STORE",
+          "assessment": "confirms Level Editor + Level Browser but does not list Workshop"
+        }
+      ],
+      "dedicated_specialist_guide_domain": false,
+      "competition": "LOW_ACCURACY / LOW_SPECIALIST",
+      "gap": "High-value accuracy gap: users ask about Workshop, while official evidence only confirms in-game Level Editor/Level Browser. A dated answer page can explicitly separate what is confirmed from what is not.",
+      "launch_owner": "/steam-workshop/"
+    },
+    {
+      "query": "Happy Wheels Steam old account levels",
+      "role": "SECOND_STRONGEST_PLAYER_PROBLEM",
+      "observed_results": [
+        {
+          "type": "Reddit launch thread",
+          "source_id": "S03_REDDIT_STEAM_ANNOUNCEMENT",
+          "assessment": "players ask whether old accounts can sync; community replies are not official"
+        },
+        {
+          "type": "Reddit preservation discussion",
+          "source_id": "S05_REDDIT_COMMUNITY_PRESERVATION",
+          "assessment": "players ask whether old community-made content is preserved"
+        },
+        {
+          "type": "official Steam page",
+          "source_id": "S01_STEAM_STORE",
+          "assessment": "confirms 5M+ user-created levels but says nothing about personal account/favorites/history migration"
+        }
+      ],
+      "dedicated_specialist_guide_domain": false,
+      "competition": "LOW",
+      "gap": "No authoritative answer page clearly distinguishes '5M+ levels are present' from 'your old account/favorites/history carry over'.",
+      "launch_owner": "/steam-account-levels/"
+    }
+  ],
+  "closeout_decision": {
+    "build": true,
+    "reason": "Brand demand is breaking out, two real player-problem queries have weak/ambiguous SERPs, and both can be answered usefully without inventing unverified Steam-build mechanics.",
+    "no_more_game_wide_research_before_build": true
+  }
+}

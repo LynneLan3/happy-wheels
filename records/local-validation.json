@@ -1,0 +1,139 @@
+{
+  "checks": [
+    {
+      "route": "/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-release/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-workshop/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-account-levels/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-controller-support/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-deck/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-release/",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-workshop/",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-account-levels/",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-controller-support/",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-deck/",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "route": "/",
+      "width": 360,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-release/",
+      "width": 360,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-workshop/",
+      "width": 360,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-account-levels/",
+      "width": 360,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-controller-support/",
+      "width": 360,
+      "status": "PASS"
+    },
+    {
+      "route": "/steam-deck/",
+      "width": 360,
+      "status": "PASS"
+    }
+  ],
+  "interactions": [
+    "mobile menu",
+    "Escape",
+    "nav destination",
+    "full-card corner click",
+    "FAQ",
+    "local video playback",
+    "search match and empty state",
+    "404"
+  ],
+  "page_errors": [],
+  "typecheck": "PASS: 0 errors, 0 warnings",
+  "build": "PASS",
+  "v4_generated_validation": "PASS: 5 guide pages",
+  "public_copy_hygiene": "PASS: 9 HTML files, 0 findings",
+  "visual_review": [
+    "homepage desktop and mobile",
+    "release desktop",
+    "Workshop desktop",
+    "Deck mobile",
+    "mobile navigation"
+  ],
+  "seo": "Unique titles/descriptions; Preview noindex; six approved URLs in sitemap",
+  "media": [
+    {
+      "file": "public/assets/happy-wheels/community.webp",
+      "sha256": "9e3f71f46321063e87d14bf1b0fe9a860c056be7e7ec49c27b445413326cdb4f"
+    },
+    {
+      "file": "public/assets/happy-wheels/hero.webp",
+      "sha256": "97439d69c6f52999948225db70238dadaa4109a20045b4a36e425f7602fd1a2b"
+    },
+    {
+      "file": "public/assets/happy-wheels/official-trailer.mp4",
+      "sha256": "50a9bf14e7295ca668d6b85eebb7b17c597e1dfe4d3ab704f66cd4cd14aa0673"
+    },
+    {
+      "file": "public/assets/happy-wheels/release.webp",
+      "sha256": "d5bef40a7ec00f6c35f511cad38cd96e879ef81ebfe87bb46822d479e08a7563"
+    },
+    {
+      "file": "public/assets/happy-wheels/workshop.webp",
+      "sha256": "60aff8aa4f36526f037448be9bc825a7d3cf6a640193971766606c97c86df79b"
+    }
+  ]
+}

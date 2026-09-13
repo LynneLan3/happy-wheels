@@ -1,0 +1,120 @@
+[
+  {
+    "id": "S01_STEAM_STORE",
+    "tier": "A_OFFICIAL",
+    "title": "Happy Wheels on Steam",
+    "url": "https://store.steampowered.com/app/4705510/Happy_Wheels/",
+    "supports": [
+      "Release date Sep 21, 2026",
+      "Developer Jim Bonacci / publisher Fancy Force",
+      "5 million+ user-created levels",
+      "Fully featured Level Editor",
+      "Interactive Level Browser with daily submissions and sorting/ranking",
+      "No ads",
+      "New controller support",
+      "Windows + SteamOS/Linux requirements"
+    ]
+  },
+  {
+    "id": "S02_STEAMDB",
+    "tier": "A_DERIVED_STEAM_METADATA",
+    "title": "Happy Wheels SteamDB",
+    "url": "https://steamdb.info/app/4705510/",
+    "supports": [
+      "Steam metadata snapshot",
+      "release time snapshot",
+      "partial controller support metadata",
+      "Steam Deck / compatibility metadata snapshot"
+    ],
+    "warning": "Dynamic; recheck near release."
+  },
+  {
+    "id": "S03_REDDIT_STEAM_ANNOUNCEMENT",
+    "tier": "B_COMMUNITY_DEMAND",
+    "title": "Happy Wheels is coming to Steam on September 21!",
+    "url": "https://www.reddit.com/r/Steam/comments/1waiy2q/happy_wheels_is_coming_to_steam_on_september_21/",
+    "supports": [
+      "large launch-announcement attention",
+      "price/free question",
+      "interest in existing levels and old accounts",
+      "Level Editor excitement",
+      "Workshop speculation"
+    ],
+    "warning": "Demand evidence only; community answers are not canonical facts."
+  },
+  {
+    "id": "S04_REDDIT_STEAM_WORKSHOP",
+    "tier": "B_COMMUNITY_DEMAND",
+    "title": "Happy Wheels releasing on Steam discussion",
+    "url": "https://www.reddit.com/r/Steam/comments/1wcksjg/happy_wheels_is_releasing_on_steam_on_21st/",
+    "supports": [
+      "high-upvote interest in Workshop support for levels/characters",
+      "price/free discussion"
+    ],
+    "warning": "Demand evidence only."
+  },
+  {
+    "id": "S05_REDDIT_COMMUNITY_PRESERVATION",
+    "tier": "B_COMMUNITY_DEMAND",
+    "title": "Happy Wheels Steam community content preservation discussion",
+    "url": "https://www.reddit.com/r/TwoBestFriendsPlay/comments/1wamw0o/happy_wheels_is_coming_to_steam_on_september_21/",
+    "supports": [
+      "players asking whether community-made content carries over",
+      "old-account nostalgia/use-case",
+      "Workshop hopes"
+    ],
+    "warning": "Demand evidence only."
+  },
+  {
+    "id": "S06_REDDIT_JACKSEPTICEYE",
+    "tier": "B_COMMUNITY_DEMAND",
+    "title": "Happy Wheels on Steam soon",
+    "url": "https://www.reddit.com/r/jacksepticeye/comments/1wb7g1p/happy_wheels_on_steam_soon/",
+    "supports": [
+      "explicit Workshop hope",
+      "nostalgia-driven launch attention"
+    ],
+    "warning": "Demand evidence only."
+  },
+  {
+    "id": "S07_INDIEFORGAMES_RELEASE",
+    "tier": "C_SERP_COMPETITOR",
+    "title": "Happy Wheels Steam Release Date — September 21, 2026",
+    "url": "https://indieforgames.com/happy-wheels-steam-release-date/",
+    "supports": [
+      "recent SERP competition for brand/release intent",
+      "summarizes official features"
+    ],
+    "warning": "Competitor/reference, not canonical fact source."
+  },
+  {
+    "id": "S08_INDIEFORGAMES_GAME",
+    "tier": "C_SERP_COMPETITOR",
+    "title": "Happy Wheels on Steam — Release Date & Gameplay",
+    "url": "https://indieforgames.com/games/happy-wheels/",
+    "supports": [
+      "recent SERP competition for generic Happy Wheels Steam intent"
+    ],
+    "warning": "Competitor/reference."
+  },
+  {
+    "id": "S09_LOW_QUALITY_WORKSHOP_CLAIM",
+    "tier": "D_SERP_NOISE",
+    "title": "NeuralFeed Happy Wheels Steam article",
+    "url": "https://neuralfeed.su/news/happy-wheels-vykhodit-v-steam-5-mln-urovnei-i-khardkor",
+    "supports": [
+      "evidence of low-quality/unsupported Workshop claim in SERP"
+    ],
+    "warning": "This article asserts Steam Workshop without official support. Treat as misinformation/noise, not evidence."
+  },
+  {
+    "id": "S10_TOTALJERKFACE_ORIGINAL",
+    "tier": "A_OFFICIAL_LEGACY",
+    "title": "TotalJerkface Happy Wheels",
+    "url": "https://totaljerkface.com/happy_wheels.tjf",
+    "supports": [
+      "legacy browser identity/background"
+    ],
+    "warning": "Legacy service; not a Steam-version mechanic source."
+  }
+]

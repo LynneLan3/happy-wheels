@@ -1,0 +1,10 @@
+---
+import presentation from '../../site-input/presentation.json';
+interface Props { id: keyof typeof presentation; compact?: boolean; }
+const {id, compact = false} = Astro.props;
+const page = presentation[id];
+---
+<a class:list={['guide-card', `tone-${page.tone}`, compact && 'compact-card']} href={`/${id}/`}>
+  {page.image && !compact && <div class="card-image"><img src={`/assets/happy-wheels/${page.image}.webp`} alt={page.alt} width="854" height="480" loading="lazy" decoding="async" /><span class="image-caption">Official trailer</span></div>}
+  <div class="card-body"><span class="eyebrow">{page.label}</span><h3>{page.short}</h3><p>{page.status}</p><span class="card-link">Read the guide <span aria-hidden="true">↗</span></span></div>
+</a>

@@ -1,0 +1,30 @@
+{
+  "schema": "research-guide-content-v2",
+  "slug": "steam-account-levels",
+  "route": "/steam-account-levels/",
+  "content_stage": "PRE_LAUNCH",
+  "article_class": "FAST_VERIFIED",
+  "publish_state": "READY_FOR_WRITER",
+  "title_draft": "Will Old Happy Wheels Accounts and Levels Carry Over to Steam?",
+  "intent": "ACCOUNT_COMPATIBILITY_STATUS",
+  "quick_answer_draft": "The Steam version is confirmed to launch with more than 5 million user-created levels, so the community archive is clearly part of the release. However, there is no official confirmation yet that your personal TotalJerkface login, favorites, history or level ownership will link to Steam.",
+  "verified_facts": [
+    "Steam advertises 5M+ user-created levels.",
+    "Steam advertises an interactive Level Browser and Level Editor."
+  ],
+  "unknown_or_needs_recheck": [
+    "Personal TotalJerkface account linking is not officially confirmed.",
+    "Favorites/history/owned uploads migration is not officially confirmed.",
+    "Community replies claiming account linking must not be treated as official."
+  ],
+  "source_ids": [
+    "S01_STEAM_STORE",
+    "S03_REDDIT_STEAM_ANNOUNCEMENT",
+    "S05_REDDIT_COMMUNITY_PRESERVATION"
+  ],
+  "media_slots": [
+    "M03_LIBRARY_HERO",
+    "C02_POST_LAUNCH_ACCOUNT_LOGIN"
+  ],
+  "writer_rule": "Final English must use the existing Shared Article Writer/APIMart path after repository binding. Keep VERIFIED and UNKNOWN explicit."
+}
