@@ -7,6 +7,10 @@ V4 standalone frontend for the supplied `happy-wheels-steam-research-v2.zip`, ch
 - Content: homepage and five Steam release / Workshop / accounts / controller / Deck status pages.
 - Delivery scope: Vercel Preview only; all pages are noindex. No Production Publisher or GSC actions.
 
+## Delivery status
+
+Frontend implementation and local browser validation passed. Vercel Preview remains blocked: the provider classified explicit Preview/staging requests as Production. All three unexpected deployments were deleted; final API readback shows zero deployments and aliases. See `records/preview-deployment.json`. No live Preview URL is available.
+
 ## Commands
 
 ```sh

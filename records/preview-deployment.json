@@ -1,0 +1,38 @@
+{
+  "siteId": "happy-wheels",
+  "status": "PREVIEW_BLOCKED_PLATFORM_TARGET_OVERRIDE",
+  "recordedAt": "2026-09-13T12:44:04.928733+00:00",
+  "sourceCommit": "86f7e0e3b3372997c0d2f4cb6f8b13b477982fee",
+  "projectId": "prj_T52ABuS0xtpEfz9znVSinsrQBEvy",
+  "requestedTarget": "preview",
+  "previewUrl": null,
+  "reason": "Vercel classified explicit Preview CLI requests and a staging API request as production on this new project. No further deployment attempts are permitted under the user scope.",
+  "unexpectedDeployments": [
+    {
+      "id": "dpl_9pRcSGoBWsdT1g6xBv2A6XQBBJWS",
+      "observedTarget": "production",
+      "cleanup": "DELETED"
+    },
+    {
+      "id": "dpl_EvuUfirrJ7toTd3cxL8NhNxySLeN",
+      "observedTarget": "production",
+      "cleanup": "DELETED"
+    },
+    {
+      "id": "dpl_CUf2dJU72WLJtKokXiTXeSa4xieH",
+      "observedTarget": "production",
+      "cleanup": "DELETED"
+    }
+  ],
+  "finalReadback": {
+    "deployments": [],
+    "aliases": []
+  },
+  "productionRequested": false,
+  "productionOccurredUnexpectedly": true,
+  "remainingProductionDeployments": 0,
+  "localPreview": "http://127.0.0.1:4337/",
+  "gscActions": "NOT_RUN",
+  "sharedWriter": "NOT_RUN",
+  "providerIssue": "https://github.com/vercel/vercel/issues/17069"
+}
