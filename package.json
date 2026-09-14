@@ -10,14 +10,19 @@
     "validate:template": "npm run validate:generated",
     "dev": "astro dev --host 127.0.0.1",
     "preview": "astro preview --host 127.0.0.1",
-    "site:generate": "tsx scripts/v4/generate-v4.ts site-input/g017-p2-v4-input.json src/v4/generated/example-site.json"
+    "site:generate": "tsx scripts/v4/generate-v4.ts site-input/g017-p2-v4-input.json src/v4/generated/example-site.json",
+    "publish:production": "node scripts/publish-production-entry.mjs",
+    "deploy:production": "node scripts/deploy-production.mjs",
+    "deploy:check": "node scripts/deploy-production.mjs --check",
+    "indexnow": "tsx ./scripts/indexnow-submit.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^7.1.6",
     "sharp": "^0.35.3",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "yaml": "^2.8.1"
   },
   "devDependencies": {
     "@types/node": "^22.13.10",
