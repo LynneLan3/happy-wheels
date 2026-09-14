@@ -1,12 +1,13 @@
 {
   "siteId": "happy-wheels",
-  "status": "GIT_PREVIEW_TRIGGER_PENDING",
-  "recordedAt": "2026-09-14T14:23:00+08:00",
-  "sourceCommit": "e474b54011ade8a8d3697d13cccfe109052f2591",
+  "status": "PREVIEW_READY",
+  "recordedAt": "2026-09-14T14:27:00+08:00",
+  "sourceCommit": "40fc3f26e23e528da71073c4807fae90850015a6",
   "projectId": "prj_T52ABuS0xtpEfz9znVSinsrQBEvy",
   "requestedTarget": "preview",
-  "previewUrl": null,
-  "reason": "The project is now connected to GitHub with productionBranch=main. A new feature-branch push is being used to request a native Git Preview deployment.",
+  "previewUrl": "https://happy-wheels-ax8p26bky-lynnelan3s-projects.vercel.app",
+  "previewDeploymentId": "dpl_3hJgej65LjyH5ocu5zP6XxAbK976",
+  "reason": "Native Git Preview is READY on the feature branch after the provider's first-deployment bootstrap.",
   "gitIntegration": {
     "provider": "github",
     "repository": "LynneLan3/happy-wheels",
