@@ -474,6 +474,8 @@ export function createVercelDeployEnv(deployment, baseEnv = process.env) {
 }
 
 function extractDeploymentUrl(output, fallback = '') {
+	const vercelDeployment = String(output || '').match(/https?:\/\/[a-z0-9-]+\.vercel\.app(?:\/[^\s)]*)?/i);
+	if (vercelDeployment?.[0]) return vercelDeployment[0].replace(/[.,]+$/, '');
 	const lines = String(output || '').split(/\r?\n/);
 	const preferred = lines.find((line) => /production|url/i.test(line) && /https?:\/\//i.test(line));
 	const match = String(preferred || output || '').match(/https?:\/\/[^\s)]+/i);
