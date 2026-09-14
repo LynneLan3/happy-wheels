@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(process.argv[2] ?? '.');
@@ -24,6 +24,10 @@ const forbidden = [
   'scripts/lib',
   'scripts/validate-generated-site.ts',
 ];
+const sharedPublisherRuntime = new Map([
+  ['src/lib', new Set(['indexnow.ts'])],
+  ['scripts/lib', new Set(['auto-update-receipt.mjs', 'deployment-identity.mjs', 'production-publisher-contract.mjs'])],
+]);
 
 for (const entry of required) {
   if (!existsSync(path.isAbsolute(entry) ? entry : path.join(root, entry))) {
@@ -31,7 +35,10 @@ for (const entry of required) {
   }
 }
 for (const entry of forbidden) {
-  if (existsSync(path.join(root, entry))) {
+  const absolute = path.join(root, entry);
+  const allowed = sharedPublisherRuntime.get(entry);
+  const files = allowed && existsSync(absolute) ? readdirSync(absolute) : [];
+  if (existsSync(absolute) && (!allowed || files.some((file) => !allowed.has(file)))) {
     throw new Error(`V4 standalone validation failed: non-runtime source present: ${entry}`);
   }
 }
