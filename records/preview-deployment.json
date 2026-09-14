@@ -1,12 +1,18 @@
 {
   "siteId": "happy-wheels",
-  "status": "PREVIEW_BLOCKED_PLATFORM_TARGET_OVERRIDE",
-  "recordedAt": "2026-09-13T12:44:04.928733+00:00",
-  "sourceCommit": "86f7e0e3b3372997c0d2f4cb6f8b13b477982fee",
+  "status": "GIT_PREVIEW_TRIGGER_PENDING",
+  "recordedAt": "2026-09-14T14:18:00+08:00",
+  "sourceCommit": "e084c8689ae5f0f343ffaa72e8e83302cae04a44",
   "projectId": "prj_T52ABuS0xtpEfz9znVSinsrQBEvy",
   "requestedTarget": "preview",
   "previewUrl": null,
-  "reason": "Vercel classified explicit Preview CLI requests and a staging API request as production on this new project. No further deployment attempts are permitted under the user scope.",
+  "reason": "The project is now connected to GitHub with productionBranch=main. A new feature-branch push is being used to request a native Git Preview deployment.",
+  "gitIntegration": {
+    "provider": "github",
+    "repository": "LynneLan3/happy-wheels",
+    "productionBranch": "main",
+    "previewBranch": "codex/happy-wheels-steam-preview"
+  },
   "unexpectedDeployments": [
     {
       "id": "dpl_9pRcSGoBWsdT1g6xBv2A6XQBBJWS",
