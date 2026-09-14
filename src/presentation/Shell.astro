@@ -5,6 +5,7 @@ interface Props { title: string; description: string; path?: string; image?: str
 const { title, description, path = '/', image = '/assets/happy-wheels/hero.webp' } = Astro.props;
 const canonical = new URL(path, Astro.site);
 const og = new URL(image, Astro.site);
+const robots = process.env.VERCEL_ENV === 'preview' ? 'noindex,follow' : 'index,follow';
 const links = Object.entries(presentation).map(([id, page]) => ({href: `/${id}/`, label: page.label}));
 ---
 <!doctype html>
@@ -12,7 +13,7 @@ const links = Object.entries(presentation).map(([id, page]) => ({href: `/${id}/`
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title><meta name="description" content={description} />
-  <meta name="robots" content="noindex,follow" /><link rel="canonical" href={canonical} />
+  <meta name="robots" content={robots} /><link rel="canonical" href={canonical} />
   <meta property="og:type" content={path === '/' ? 'website' : 'article'} /><meta property="og:title" content={title} />
   <meta property="og:description" content={description} /><meta property="og:url" content={canonical} /><meta property="og:image" content={og} />
   <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={og} />

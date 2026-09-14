@@ -16,7 +16,7 @@ site:
 deployment:
   provider: vercel
   orgId: "team_yAOizMTSVuT0RJATgFdAlQuG"
-  projectId: ""
+  projectId: "prj_T52ABuS0xtpEfz9znVSinsrQBEvy"
   projectName: "happy-wheels"
   productionUrl: "https://happy-wheels.vercel.app/"
   productionBranch: ""
