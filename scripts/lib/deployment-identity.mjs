@@ -120,7 +120,7 @@ export function spawnVercelAliasSet(deploymentUrl, alias, options = {}) {
 	};
 }
 
-export async function bindVercelCanonicalAlias({ deploymentUrl, candidates, aliasFn = spawnVercelAliasSet, rootDir, maxAttemptsPerAlias = aliasFn === spawnVercelAliasSet ? 2 : 1 } = {}) {
+export async function bindVercelCanonicalAlias({ deploymentUrl, candidates, aliasFn = spawnVercelAliasSet, rootDir, maxAttemptsPerAlias = aliasFn === spawnVercelAliasSet ? 3 : 1 } = {}) {
 	const target = asString(deploymentUrl);
 	const aliases = Array.isArray(candidates) ? candidates : [];
 	const attempts = [];
@@ -129,7 +129,7 @@ export async function bindVercelCanonicalAlias({ deploymentUrl, candidates, alia
 			const result = await aliasFn(target, candidate, { rootDir });
 			attempts.push({ alias: candidate, attempt, ok: Boolean(result?.ok), output: result?.output || '' });
 			if (result?.ok) return { ok: true, productionUrl: normalizePublicUrl(candidate), alias: candidate, attempts };
-			if (attempt < maxAttemptsPerAlias) await new Promise((resolve) => setTimeout(resolve, 500));
+			if (attempt < maxAttemptsPerAlias) await new Promise((resolve) => setTimeout(resolve, 2000));
 		}
 	}
 	const error = new Error(`CANONICAL_ALIAS_EXHAUSTED: no deterministic Vercel alias could be bound (${aliases.join(', ')})`);
