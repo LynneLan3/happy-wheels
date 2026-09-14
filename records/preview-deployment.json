@@ -15,6 +15,13 @@
   },
   "unexpectedDeployments": [
     {
+      "id": "dpl_4HmnaaFtjSo3krikDbY4V4fEKapV",
+      "observedTarget": "production",
+      "source": "native Git deployment after first deployment cleanup",
+      "commit": "d79f68090f4b4cab22ba4f2c5a11bfccb7d71923",
+      "cleanup": "RETAINED_AS_PLATFORM_BOOTSTRAP"
+    },
+    {
       "id": "dpl_AnQr5aAaW11AUbYGsvoTzAmJd94d",
       "observedTarget": "production",
       "source": "native Git deployment on first project deployment",
