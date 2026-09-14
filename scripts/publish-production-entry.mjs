@@ -6,6 +6,7 @@ import os from 'node:os';
 import path from 'node:path';
 import YAML from 'yaml';
 import { generateAutoUpdateReceipt } from './lib/auto-update-receipt.mjs';
+import { validateVercelOnlyProductionUrl } from './lib/deployment-identity.mjs';
 import { runProductionPublish } from './publish-production.mjs';
 
 function asString(value) {
@@ -81,7 +82,7 @@ function enrichLaunchReceipt(rootDir, receiptPath) {
   const spec = YAML.parse(readFileSync(path.join(rootDir, 'site-spec.yaml'), 'utf8')) || {};
   const siteId = asString(spec.site?.id);
   const productionUrl = asString(spec.deployment?.productionUrl || spec.site?.siteUrl);
-  if (!siteId || !productionUrl) throw new Error('SITE_LAUNCH requires site.id and deployment.productionUrl in site-spec.yaml');
+  if (!siteId) throw new Error('SITE_LAUNCH requires site.id in site-spec.yaml');
   if (asString(receipt.common.siteId) && asString(receipt.common.siteId) !== siteId) {
     throw new Error(`SITE_LAUNCH siteId conflict: receipt=${receipt.common.siteId} site-spec=${siteId}`);
   }
@@ -89,8 +90,13 @@ function enrichLaunchReceipt(rootDir, receiptPath) {
   receipt.common.siteId = siteId;
   receipt.common.repositoryUrl = gitRepositoryUrl(rootDir);
   receipt.common.templateVersion = asString(spec.templateVersion);
-  receipt.common.sitemapUrl = new URL('/sitemap-index.xml', productionUrl).href;
-  receipt.common.launchPageCount = launchPageCount(receipt, productionUrl);
+  if (productionUrl) {
+    const productionUrlCheck = validateVercelOnlyProductionUrl(productionUrl);
+    if (productionUrlCheck.ok) {
+      receipt.common.sitemapUrl = new URL('/sitemap-index.xml', productionUrl).href;
+      receipt.common.launchPageCount = launchPageCount(receipt, productionUrl);
+    }
+  }
   return { receipt, enriched: true };
 }
 

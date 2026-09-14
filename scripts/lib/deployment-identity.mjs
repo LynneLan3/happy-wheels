@@ -62,6 +62,79 @@ export function isBlockedProductionHostname(hostname) {
 	return false;
 }
 
+export function validateVercelOnlyProductionUrl(value, options = {}) {
+	const raw = asString(value);
+	if (!raw || raw === 'MISSING') return { ok: false, reason: 'an explicitly configured canonical Production alias is required' };
+	let parsed;
+	try {
+		parsed = new URL(raw);
+	} catch {
+		return { ok: false, reason: 'canonical Production URL must be an absolute URL' };
+	}
+	const host = parsed.hostname.toLowerCase();
+	if (parsed.protocol !== 'https:' || !host.endsWith('.vercel.app')) {
+		if (!options.requireVercel) return { ok: true, url: normalizePublicUrl(raw) };
+		return { ok: false, reason: 'VERCEL_ONLY canonical Production URL must be an HTTPS .vercel.app alias' };
+	}
+	const teamSlug = asString(options.teamSlug) || PRIMARY_VERCEL_TEAM_SLUG;
+	const hostWithoutSuffix = host.slice(0, -'.vercel.app'.length);
+	const tokens = hostWithoutSuffix.split('-');
+	const generatedToken = tokens.some((token) =>
+		(token.startsWith('dpl_') || (token.length >= 6 && /[a-z]/.test(token) && /\d/.test(token))),
+	);
+	if (
+		host.endsWith(`-${teamSlug}.vercel.app`) ||
+		host.includes('-git-') ||
+		host.includes('-preview-') ||
+		host.endsWith('-preview.vercel.app') ||
+		generatedToken
+	) {
+		return {
+			ok: false,
+			reason: 'preview, immutable deployment, random, or Vercel team/default hostname cannot be canonical Production identity',
+		};
+	}
+	return { ok: true, url: normalizePublicUrl(raw) };
+}
+
+function aliasSlug(value) {
+	return asString(value).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+export function vercelCanonicalAliasCandidates({ projectName, siteId }) {
+	const project = aliasSlug(projectName);
+	const site = aliasSlug(siteId);
+	return [...new Set([project, site && `${site}-game`, site && `${site}-guide`].filter(Boolean))]
+		.map((slug) => `https://${slug}.vercel.app`);
+}
+
+export function spawnVercelAliasSet(deploymentUrl, alias, options = {}) {
+	const result = spawnSync('vercel', ['alias', 'set', deploymentUrl, new URL(alias).hostname, '--scope', PRIMARY_VERCEL_TEAM_SLUG], {
+		cwd: options.rootDir,
+		encoding: 'utf8',
+		env: { ...process.env, ...(options.env || {}) },
+	});
+	return {
+		ok: result.status === 0,
+		output: `${result.stdout || ''}\n${result.stderr || ''}`.trim(),
+	};
+}
+
+export async function bindVercelCanonicalAlias({ deploymentUrl, candidates, aliasFn = spawnVercelAliasSet, rootDir } = {}) {
+	const target = asString(deploymentUrl);
+	const aliases = Array.isArray(candidates) ? candidates : [];
+	const attempts = [];
+	for (const candidate of aliases) {
+		const result = await aliasFn(target, candidate, { rootDir });
+		attempts.push({ alias: candidate, ok: Boolean(result?.ok), output: result?.output || '' });
+		if (result?.ok) return { ok: true, productionUrl: normalizePublicUrl(candidate), alias: candidate, attempts };
+	}
+	const error = new Error(`CANONICAL_ALIAS_EXHAUSTED: no deterministic Vercel alias could be bound (${aliases.join(', ')})`);
+	error.code = 'CANONICAL_ALIAS_EXHAUSTED';
+	error.attempts = attempts;
+	throw error;
+}
+
 function blockedReason(reason, extraLines = []) {
 	return {
 		ok: false,
@@ -235,6 +308,18 @@ export function checkDeploymentIdentity(options) {
 	}
 	base.checks.provider = 'PASS';
 	base.checks.orgId = fields.orgId ? 'PASS' : 'FAIL';
+	if (fields.productionUrl) {
+		const productionUrlCheck = validateVercelOnlyProductionUrl(fields.productionUrl);
+		if (!productionUrlCheck.ok && productionUrlCheck.reason.includes('absolute URL')) {
+			return {
+				...base,
+				...blockedReason('invalid Vercel production identity'),
+				extraLines: [productionUrlCheck.reason],
+				checks: { ...base.checks, specExists: 'PASS', provider: 'PASS', orgId: base.checks.orgId, productionUrl: 'FAIL' },
+			};
+		}
+		base.checks.productionUrl = productionUrlCheck.ok ? 'PASS' : 'WARN';
+	}
 
 	if (!fields.projectId) {
 		return {
@@ -283,7 +368,7 @@ export function checkDeploymentIdentity(options) {
 			urlIdentity: 'SKIP',
 			orgId: 'PASS',
 			projectId: 'PASS',
-			productionUrl: 'SKIP',
+			productionUrl: base.checks.productionUrl,
 		},
 	};
 }

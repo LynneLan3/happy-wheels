@@ -12,10 +12,13 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
 	checkDeploymentIdentity,
+	bindVercelCanonicalAlias,
 	normalizePublicUrl,
 	readSiteSpecDocument,
 	runDeployCli,
 	spawnVercelDeploy,
+	vercelCanonicalAliasCandidates,
+	validateVercelOnlyProductionUrl,
 } from './lib/deployment-identity.mjs';
 import {
 	PRODUCTION_PUBLISHER_CONTRACT,
@@ -341,16 +344,30 @@ function formatGscFollowUp(result) {
 function identityForPublish(rootDir) {
 	const identity = checkDeploymentIdentity({ rootDir });
 	if (!identity.ok) throw new Error(identity.blockedReason || 'repository/deployment identity check failed');
-	if (!identity.deployment?.productionUrl) throw new Error('deployment.productionUrl is required for standard production publishing');
+	const rawProductionUrl = asString(identity.deployment?.productionUrl);
+	let productionUrl = '';
+	let aliasCandidates = [];
+	if (rawProductionUrl) {
+		const productionUrlCheck = validateVercelOnlyProductionUrl(rawProductionUrl);
+		if (!productionUrlCheck.ok && productionUrlCheck.reason.includes('absolute URL')) throw new Error(productionUrlCheck.reason);
+		if (productionUrlCheck.ok) {
+			productionUrl = normalizePublicUrl(rawProductionUrl);
+			if (new URL(productionUrl).hostname.endsWith('.vercel.app')) aliasCandidates = [productionUrl];
+		}
+	}
 	try {
-		normalizePublicUrl(identity.deployment.productionUrl);
+		if (rawProductionUrl) normalizePublicUrl(rawProductionUrl);
 	} catch {
 		throw new Error('deployment.productionUrl must be an absolute public URL');
 	}
 	const loaded = readSiteSpecDocument(rootDir);
 	const siteId = asString(loaded.document?.site?.id);
 	if (!siteId) throw new Error('site.id is required in site-spec.yaml for standard production publishing');
-	return { identity, document: loaded.document, siteId, productionUrl: normalizePublicUrl(identity.deployment.productionUrl) };
+	if (!productionUrl) {
+		aliasCandidates = vercelCanonicalAliasCandidates({ projectName: identity.deployment?.projectName, siteId });
+	}
+	if (!productionUrl && aliasCandidates.length === 0) throw new Error('CANONICAL_ALIAS_EXHAUSTED: no deterministic Vercel alias candidates');
+	return { identity, document: loaded.document, siteId, productionUrl, aliasCandidates };
 }
 
 function normalizeForPublish(receipt, context, head, deploymentUrl, deployedAt) {
@@ -361,7 +378,8 @@ function normalizeForPublish(receipt, context, head, deploymentUrl, deployedAt) 
 	}
 	const productionUrl = context.productionUrl;
 	if (asString(common.productionUrl) && normalizePublicUrl(common.productionUrl) !== productionUrl) {
-		throw new Error(`receipt common.productionUrl does not match deployment.productionUrl (${productionUrl})`);
+		const receiptUrlCheck = validateVercelOnlyProductionUrl(common.productionUrl);
+		if (receiptUrlCheck.ok) throw new Error(`receipt common.productionUrl does not match deployment.productionUrl (${productionUrl})`);
 	}
 	if (asString(common.deploymentUrl) && asString(deploymentUrl) && asString(common.deploymentUrl) !== asString(deploymentUrl)) {
 		throw new Error(`receipt common.deploymentUrl does not match the captured Vercel deployment URL (${deploymentUrl})`);
@@ -472,13 +490,26 @@ export async function runProductionPublish(options = {}) {
 			return { ...result, error: 'production deployment failed' };
 		}
 		result.production = 'PASS';
-		const normalizedProductionUrl = context.productionUrl;
+		let normalizedProductionUrl = context.productionUrl;
+		const deploymentUrl = asString(options.deploymentUrl)
+			|| asString(capturedDeploy?.deploymentUrl)
+			|| asString(deployment.result.deployment.productionUrl);
+		if (context.aliasCandidates.length > 0) {
+			const alias = await bindVercelCanonicalAlias({
+				deploymentUrl,
+				candidates: context.aliasCandidates,
+				aliasFn: options.bindAlias,
+				rootDir,
+			});
+			normalizedProductionUrl = alias.productionUrl;
+		}
+		if (!normalizedProductionUrl) throw new Error('CANONICAL_ALIAS_EXHAUSTED: publisher did not resolve a canonical Production URL');
 		result.productionUrl = normalizedProductionUrl;
 		const normalizedReceipt = normalizeForPublish(
 			receipt,
 			context,
 			head,
-			capturedDeploy?.deploymentUrl || deployment.result.deployment.productionUrl,
+			deploymentUrl,
 			options.now ? options.now() : new Date().toISOString(),
 		);
 		const verificationUrls = buildVerificationUrls(normalizedReceipt, normalizedProductionUrl);
