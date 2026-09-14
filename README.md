@@ -5,11 +5,11 @@ V4 standalone frontend for the supplied `happy-wheels-steam-research-v2.zip`, ch
 - Repository: `LynneLan3/happy-wheels`
 - Canonical checkout: `/Users/lanling/Code/hot_words_websites/happy-wheels`
 - Content: homepage and five Steam release / Workshop / accounts / controller / Deck status pages.
-- Delivery scope: Vercel Preview only; all pages are noindex. No Production Publisher or GSC actions.
+- Delivery scope: Vercel Preview is ready; all pages are noindex until a production identity is approved. Production Publisher and GSC actions remain pending release readiness.
 
 ## Delivery status
 
-Frontend implementation and local browser validation passed. Vercel Preview remains blocked: the provider classified explicit Preview/staging requests as Production. All three unexpected deployments were deleted; final API readback shows zero deployments and aliases. See `records/preview-deployment.json`. No live Preview URL is available.
+Frontend implementation and local browser validation passed. Native Git Preview is ready at the URL recorded in `records/preview-deployment.json`. The first deployment bootstrap was handled within the same Vercel project; no second project was created. Production remains blocked by the registry domain policy because Happy Wheels has no independent domain and no explicit `VERCEL_ONLY` policy.
 
 ## Commands
 

@@ -33,8 +33,8 @@ Four optimized local frames: hero (0.15-second seek), release (3.1-second seek),
 
 ## Boundaries
 
-Only Preview deployment was authorized. No custom domain was configured; no Production Publisher invocation, GSC registration, Shared Writer or formal DevelopmentTask writeback occurred. The source starter branch was restored to `feat/publish-gsc-indexing-sync` at `97ba79ac61aea4d2778281742b123ed768185fb1` after generation.
+Preview is ready through the existing Vercel project and GitHub integration. No custom domain was configured; no Production Publisher invocation, GSC registration, Shared Writer or formal DevelopmentTask writeback occurred. The source starter branch was restored to `feat/publish-gsc-indexing-sync` at `97ba79ac61aea4d2778281742b123ed768185fb1` after generation.
 
 ## Actual deployment outcome
 
-Preview is blocked. Vercel returned `target: production` for three explicitly Preview/staging requests. These unexpected deployments were all deleted; final project API readback contains zero deployments and zero aliases. No Production result is retained or accepted. See `records/preview-deployment.json`. The frontend is committed and available locally, but there is no Vercel Preview URL.
+The native Git Preview deployment is `READY` with `target: preview`; its six routes were verified through the project protection bypass. The first-deployment Production bootstrap remains in the same Vercel project and is not the release result. Release Readiness is currently blocked only by SEO/domain policy: no independent production domain is registered and the registry does not explicitly allow `VERCEL_ONLY`. See `records/preview-deployment.json` and the Control Center release receipt.
