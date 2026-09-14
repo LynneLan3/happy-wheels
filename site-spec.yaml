@@ -21,6 +21,9 @@ deployment:
   productionUrl: "https://happy-wheels-lynnelan3s-projects.vercel.app/"
   productionBranch: ""
 
+indexing:
+  indexnow_enabled: false
+
 game:
   name: "Happy Wheels"
   hubTitle: "Happy Wheels Wiki"
