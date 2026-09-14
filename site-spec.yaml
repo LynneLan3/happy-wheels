@@ -6,7 +6,7 @@ site:
   id: "happy-wheels"
   mode: standalone
   locale: en
-  siteUrl: "https://happy-wheels-lynnelan3s-projects.vercel.app/"
+  siteUrl: "https://happy-wheels-game.vercel.app/"
   hubPath: /
   title: "Happy Wheels"
   shortName: "Happy Wheels"
@@ -18,7 +18,7 @@ deployment:
   orgId: "team_yAOizMTSVuT0RJATgFdAlQuG"
   projectId: "prj_T52ABuS0xtpEfz9znVSinsrQBEvy"
   projectName: "happy-wheels"
-  productionUrl: "https://happy-wheels-lynnelan3s-projects.vercel.app/"
+  productionUrl: "https://happy-wheels-game.vercel.app/"
   productionBranch: ""
 
 indexing:
