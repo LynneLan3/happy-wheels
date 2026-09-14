@@ -8,7 +8,7 @@ site:
   locale: en
   siteUrl: "https://happy-wheels-lynnelan3s-projects.vercel.app/"
   hubPath: /
-  title: "Happy Wheels Wiki"
+  title: "Happy Wheels"
   shortName: "Happy Wheels"
   description: "Starter wiki shell for Happy Wheels."
   disclaimer: "Content requires source review before production."
@@ -26,7 +26,7 @@ indexing:
 
 game:
   name: "Happy Wheels"
-  hubTitle: "Happy Wheels Wiki"
+  hubTitle: "Happy Wheels"
   tagline: "Source-reviewed game information, to be filled from upstream evidence."
   releaseStatus: unknown
   developer: Unknown

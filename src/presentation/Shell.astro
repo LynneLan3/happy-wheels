@@ -3,6 +3,7 @@ import '../styles/happy-wheels.css';
 import presentation from '../../site-input/presentation.json';
 interface Props { title: string; description: string; path?: string; image?: string; }
 const { title, description, path = '/', image = '/assets/happy-wheels/hero.webp' } = Astro.props;
+const publicBrand = 'Happy Wheels';
 const canonical = new URL(path, Astro.site);
 const og = new URL(image, Astro.site);
 const robots = process.env.VERCEL_ENV === 'preview' ? 'noindex,follow' : 'index,follow';
@@ -23,13 +24,13 @@ const links = Object.entries(presentation).map(([id, page]) => ({href: `/${id}/`
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/" aria-label="Happy Wheels Steam Guide home"><span class="brand-wheel" aria-hidden="true">✳</span><span>HAPPY WHEELS<small>STEAM GUIDE / 2026</small></span></a>
+    <a class="brand" href="/" aria-label={`${publicBrand} home`}><span class="brand-wheel" aria-hidden="true">✳</span><span>{publicBrand}</span></a>
     <nav class="desktop-nav" aria-label="Primary">{links.map(link => <a href={link.href} aria-current={path === link.href ? 'page' : undefined}>{link.label}</a>)}</nav>
     <details class="mobile-menu"><summary aria-label="Open navigation menu">Menu <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile">{links.map(link => <a href={link.href} aria-current={path === link.href ? 'page' : undefined}>{link.label}</a>)}</nav></details>
   </div>
 </header>
 <slot />
-<footer class="footer"><div class="container footer-grid"><div><a class="brand" href="/">HAPPY WHEELS<small>STEAM GUIDE / 2026</small></a><p>An independent guide to the Steam edition.<br />Not affiliated with Jim Bonacci or Fancy Force.</p></div><nav aria-label="Footer"><a href="/#guides">Browse guides</a><a href="/steam-release/">Release status</a><a href="/#faq">Common questions</a></nav><div class="footer-note"><span class="eyebrow">Before the starting line</span><p>Information checked September 13, 2026.<br />Game and artwork belong to their respective owners.</p></div></div></footer>
+<footer class="footer"><div class="container footer-grid"><div><a class="brand" href="/" aria-label={`${publicBrand} home`}>{publicBrand}</a><p>An independent guide to the Steam edition.<br />Not affiliated with Jim Bonacci or Fancy Force.</p></div><nav aria-label="Footer"><a href="/#guides">Browse guides</a><a href="/steam-release/">Release status</a><a href="/#faq">Common questions</a></nav><div class="footer-note"><span class="eyebrow">Before the starting line</span><p>Information checked September 13, 2026.<br />Game and artwork belong to their respective owners.</p></div></div></footer>
 <script>
 const menu = document.querySelector<HTMLDetailsElement>('.mobile-menu');
 document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu?.open) { menu.open = false; menu.querySelector('summary')?.focus(); } });
