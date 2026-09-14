@@ -1,8 +1,8 @@
 {
   "siteId": "happy-wheels",
   "status": "GIT_PREVIEW_TRIGGER_PENDING",
-  "recordedAt": "2026-09-14T14:18:00+08:00",
-  "sourceCommit": "e084c8689ae5f0f343ffaa72e8e83302cae04a44",
+  "recordedAt": "2026-09-14T14:23:00+08:00",
+  "sourceCommit": "e474b54011ade8a8d3697d13cccfe109052f2591",
   "projectId": "prj_T52ABuS0xtpEfz9znVSinsrQBEvy",
   "requestedTarget": "preview",
   "previewUrl": null,
@@ -14,6 +14,13 @@
     "previewBranch": "codex/happy-wheels-steam-preview"
   },
   "unexpectedDeployments": [
+    {
+      "id": "dpl_AnQr5aAaW11AUbYGsvoTzAmJd94d",
+      "observedTarget": "production",
+      "source": "native Git deployment on first project deployment",
+      "commit": "e474b54011ade8a8d3697d13cccfe109052f2591",
+      "cleanup": "DELETED"
+    },
     {
       "id": "dpl_9pRcSGoBWsdT1g6xBv2A6XQBBJWS",
       "observedTarget": "production",
